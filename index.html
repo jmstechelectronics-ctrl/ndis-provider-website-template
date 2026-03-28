@@ -1,0 +1,2534 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A warm, mobile-first one-page website template for NDIS providers, built to feel human, trustworthy and easy to customise." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>NDIS Provider Website Template</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sand-50: #fff9f4;
+      --sand-100: #f9efe6;
+      --sand-200: #f3e5d7;
+      --sand-300: #e7d0bc;
+      --sage-100: #e6efe8;
+      --sage-200: #d2e4d7;
+      --sage-300: #b4d1bc;
+      --coral-200: #f7d6bf;
+      --coral-400: #de9f78;
+      --coral-500: #c67d5c;
+      --teal-500: #2f7b72;
+      --teal-700: #1f5b56;
+      --ink-900: #2d211b;
+      --ink-700: #5e5149;
+      --ink-500: #7d7068;
+      --white: #ffffff;
+      --line: rgba(107, 84, 70, 0.12);
+      --shadow-soft: 0 24px 70px rgba(100, 76, 60, 0.14);
+      --shadow-card: 0 16px 36px rgba(100, 76, 60, 0.1);
+      --radius-xl: 36px;
+      --radius-lg: 26px;
+      --radius-md: 20px;
+      --radius-sm: 16px;
+      --container: 1180px;
+      --section-gap: 64px;
+      --header-height: 86px;
+      --sticky-cta-height: 86px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--ink-900);
+      background:
+        radial-gradient(1000px 520px at 10% -6%, rgba(222, 159, 120, 0.28), transparent 58%),
+        radial-gradient(1100px 560px at 100% 0%, rgba(180, 209, 188, 0.34), transparent 54%),
+        linear-gradient(180deg, #fffaf6 0%, #f7efe7 100%);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--container), calc(100vw - 32px));
+      margin: 0 auto;
+    }
+
+    .site-shell {
+      padding-bottom: calc(var(--sticky-cta-height) + 18px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(47, 123, 114, 0.16);
+      color: var(--teal-700);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--coral-500);
+      box-shadow: 0 0 0 6px rgba(222, 159, 120, 0.16);
+    }
+
+    .section {
+      padding: var(--section-gap) 0;
+      position: relative;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+
+    .section-heading h2,
+    .hero-copy h1,
+    .contact-panel h2 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+    }
+
+    .section-heading p,
+    .lede,
+    .section-copy {
+      margin: 0;
+      color: var(--ink-700);
+      font-size: 1.02rem;
+      max-width: 62ch;
+    }
+
+    .surface {
+      position: relative;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(18px);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(107, 84, 70, 0.08);
+      background: rgba(255, 249, 244, 0.78);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      min-height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.95), transparent 30%),
+        linear-gradient(135deg, #2f7b72, #8fc0a3 70%, #f0bf9a);
+      box-shadow: 0 14px 28px rgba(47, 123, 114, 0.22);
+      position: relative;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .brand-mark::before {
+      width: 13px;
+      height: 13px;
+      left: 14px;
+      top: 13px;
+    }
+
+    .brand-mark::after {
+      width: 24px;
+      height: 10px;
+      left: 18px;
+      bottom: 15px;
+      transform: rotate(-24deg);
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    .brand-name {
+      margin: 0;
+      font-weight: 800;
+      font-size: 1.02rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-tag {
+      margin: 0;
+      color: var(--ink-500);
+      font-size: 0.88rem;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-nav nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .header-nav nav a,
+    .mobile-panel a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: rgba(45, 33, 27, 0.84);
+      transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .header-nav nav a:hover,
+    .header-nav nav a:focus-visible,
+    .mobile-panel a:hover,
+    .mobile-panel a:focus-visible {
+      background: rgba(47, 123, 114, 0.1);
+      color: var(--teal-700);
+      outline: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
+      cursor: pointer;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--teal-500), var(--teal-700));
+      box-shadow: 0 16px 28px rgba(47, 123, 114, 0.24);
+    }
+
+    .btn-secondary {
+      color: var(--teal-700);
+      background: rgba(255, 255, 255, 0.82);
+      border-color: rgba(47, 123, 114, 0.18);
+    }
+
+    .btn-tertiary {
+      color: var(--ink-900);
+      background: rgba(255, 255, 255, 0.72);
+      border-color: rgba(107, 84, 70, 0.12);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(107, 84, 70, 0.12);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.78);
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: var(--ink-900);
+    }
+
+    .menu-icon {
+      display: grid;
+      gap: 5px;
+    }
+
+    .menu-icon span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-panel {
+      display: none;
+      padding: 0 0 16px;
+    }
+
+    .mobile-panel-inner {
+      display: grid;
+      gap: 6px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(107, 84, 70, 0.1);
+      border-radius: 22px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .hero {
+      padding: 28px 0 30px;
+    }
+
+    .hero-card {
+      border-radius: 40px;
+      padding: 22px;
+      overflow: clip;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      display: grid;
+      align-content: center;
+      gap: 20px;
+      padding: clamp(10px, 2vw, 14px);
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.8rem, 6.4vw, 5.5rem);
+    }
+
+    .hero-copy .lede {
+      font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+    }
+
+    .hero-assurance {
+      margin: -2px 0 2px;
+      color: var(--teal-700);
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-notes {
+      display: grid;
+      gap: 12px;
+      padding-top: 6px;
+    }
+
+    .hero-note-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 15px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(47, 123, 114, 0.14);
+      color: var(--teal-700);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    .hero-chip::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--coral-500);
+      flex: 0 0 auto;
+    }
+
+    .hero-media {
+      position: relative;
+      min-height: 330px;
+      border-radius: 30px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 16% 16%, rgba(255, 255, 255, 0.78), transparent 26%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.68), rgba(245, 233, 221, 0.8));
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow-card);
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 36px rgba(69, 49, 41, 0.12);
+      color: var(--ink-700);
+      font-size: 0.94rem;
+    }
+
+    .trust-strip {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow-card);
+    }
+
+    .trust-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .trust-strip-item {
+      display: grid;
+      gap: 5px;
+      padding: 14px 16px;
+      border-radius: 22px;
+      background: rgba(249, 244, 238, 0.92);
+      border: 1px solid rgba(107, 84, 70, 0.08);
+    }
+
+    .trust-strip-item strong {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--teal-700);
+    }
+
+    .trust-strip-item span {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--ink-900);
+    }
+
+    .trust-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .trust-mini-card {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(107, 84, 70, 0.08);
+      box-shadow: 0 10px 24px rgba(100, 76, 60, 0.08);
+    }
+
+    .trust-mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .trust-mini-card p {
+      margin: 0;
+      color: var(--ink-700);
+      font-size: 0.94rem;
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow-card);
+    }
+
+    .intro-card h3,
+    .service-card h3,
+    .step-card h3,
+    .testimonial-card h3,
+    .resource-card h3,
+    .contact-detail h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .intro-card p,
+    .service-card p,
+    .step-card p,
+    .why-list li,
+    .testimonial-card p,
+    .faq-answer p,
+    .resource-card p,
+    .contact-detail p,
+    .contact-detail a,
+    .template-note {
+      margin: 0;
+      color: var(--ink-700);
+    }
+
+    .intro-icon,
+    .service-icon,
+    .step-number,
+    .resource-icon {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.88), transparent 34%),
+        linear-gradient(145deg, rgba(47, 123, 114, 0.2), rgba(222, 159, 120, 0.28));
+      color: var(--teal-700);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    }
+
+    .intro-icon svg,
+    .service-icon svg,
+    .resource-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      height: 100%;
+      padding: 28px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(252, 246, 240, 0.92));
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -50px -70px auto;
+      width: 160px;
+      height: 160px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(210, 228, 215, 0.55), transparent 65%);
+    }
+
+    .service-card h3,
+    .service-card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card.is-highlight {
+      background:
+        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.18), transparent 24%),
+        linear-gradient(150deg, #2f7b72, #3a6f69 58%, #6f8865 100%);
+      color: var(--white);
+      box-shadow: 0 24px 44px rgba(47, 123, 114, 0.24);
+    }
+
+    .service-card.is-highlight p,
+    .service-card.is-highlight h3 {
+      color: var(--white);
+    }
+
+    .service-card.is-highlight .service-icon {
+      background: rgba(255, 255, 255, 0.14);
+      color: var(--white);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+
+    .services-foot {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+      align-items: center;
+      grid-template-columns: minmax(0, 1fr) auto;
+      padding: 18px 22px;
+      border-radius: 24px;
+      background: rgba(249, 244, 238, 0.92);
+      border: 1px solid rgba(107, 84, 70, 0.08);
+    }
+
+    .services-foot p {
+      margin: 0;
+      color: var(--ink-700);
+    }
+
+    .secondary-services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .secondary-service {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(47, 123, 114, 0.14);
+      color: var(--teal-700);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .split-media {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .image-card {
+      position: relative;
+      min-height: 320px;
+      border-radius: 32px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.6), transparent 26%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.76), rgba(239, 228, 215, 0.94));
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow-card);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 22px 22px 22px;
+      height: 34px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(50, 33, 25, 0.06));
+      filter: blur(14px);
+      pointer-events: none;
+    }
+
+    .content-card {
+      padding: clamp(24px, 4vw, 42px);
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow-card);
+    }
+
+    .content-card h2 {
+      margin: 0 0 16px;
+      font-family: "Fraunces", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+      line-height: 1.04;
+    }
+
+    .content-card > p {
+      margin: 0 0 18px;
+      color: var(--ink-700);
+    }
+
+    .value-list,
+    .why-list {
+      display: grid;
+      gap: 14px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .value-list li,
+    .why-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 15px 0;
+      border-top: 1px solid rgba(107, 84, 70, 0.1);
+    }
+
+    .value-list li:first-child,
+    .why-list li:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .list-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(47, 123, 114, 0.12);
+      color: var(--teal-700);
+      font-weight: 800;
+      margin-top: 2px;
+      flex: 0 0 auto;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step-card {
+      position: relative;
+      height: 100%;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow-card);
+    }
+
+    .step-number {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--teal-700);
+    }
+
+    .why-points {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .why-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      padding: 18px 20px;
+      border-radius: 24px;
+      background: rgba(249, 244, 238, 0.92);
+      border: 1px solid rgba(107, 84, 70, 0.08);
+    }
+
+    .why-item-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, rgba(47, 123, 114, 0.18), rgba(222, 159, 120, 0.24));
+      color: var(--teal-700);
+    }
+
+    .why-item-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .why-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial-empty {
+      padding: 22px 24px;
+      border-radius: 24px;
+      background: rgba(249, 244, 238, 0.92);
+      border: 1px solid rgba(107, 84, 70, 0.08);
+      color: var(--ink-700);
+    }
+
+    .testimonial-card {
+      height: 100%;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow-card);
+      display: grid;
+      gap: 18px;
+    }
+
+    .testimonial-quote {
+      font-size: 1.05rem;
+      line-height: 1.74;
+    }
+
+    .testimonial-meta {
+      display: grid;
+      gap: 4px;
+    }
+
+    .testimonial-name {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .testimonial-role {
+      font-size: 0.94rem;
+      color: var(--ink-500);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      color: var(--ink-900);
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .faq-question::-webkit-details-marker,
+    .faq-question::marker {
+      display: none;
+      content: "";
+    }
+
+    .faq-question:hover,
+    .faq-question:focus-visible {
+      outline: none;
+      background: rgba(47, 123, 114, 0.05);
+    }
+
+    .faq-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(47, 123, 114, 0.1);
+      color: var(--teal-700);
+      flex: 0 0 auto;
+      position: relative;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .faq-icon::after {
+      transform: rotate(90deg);
+    }
+
+    .faq-item[open] .faq-icon::after {
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+
+    .faq-answer {
+      padding: 0 24px 22px;
+    }
+
+    .faq-answer p + p {
+      margin-top: 12px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .contact-section .section-heading {
+      margin-bottom: 24px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      align-items: start;
+    }
+
+    .contact-panel,
+    .contact-side {
+      padding: clamp(24px, 4vw, 34px);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-panel h2 {
+      font-size: clamp(2.2rem, 4vw, 3.3rem);
+      margin-bottom: 14px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--ink-900);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(107, 84, 70, 0.14);
+      background: rgba(255, 250, 247, 0.86);
+      color: var(--ink-900);
+      transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: rgba(47, 123, 114, 0.45);
+      box-shadow: 0 0 0 4px rgba(47, 123, 114, 0.12);
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-side {
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact-visual {
+      min-height: 260px;
+    }
+
+    .contact-detail {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(249, 244, 238, 0.88);
+      border: 1px solid rgba(107, 84, 70, 0.08);
+      display: grid;
+      gap: 8px;
+    }
+
+    .contact-detail a {
+      font-weight: 800;
+      color: var(--teal-700);
+    }
+
+    .template-note {
+      padding: 18px 20px;
+      border-radius: 24px;
+      background: rgba(230, 239, 232, 0.72);
+      border: 1px solid rgba(47, 123, 114, 0.12);
+      font-size: 0.95rem;
+    }
+
+    .site-footer {
+      padding: 30px 0 26px;
+    }
+
+    .footer-card {
+      padding: 26px;
+      border-radius: 32px;
+      background: rgba(45, 33, 27, 0.96);
+      color: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 26px 56px rgba(45, 33, 27, 0.2);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: grid;
+      gap: 14px;
+    }
+
+    .footer-brand .brand {
+      color: var(--white);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.84);
+      font-weight: 700;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-social a {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.86);
+      transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+    }
+
+    .footer-social a:hover,
+    .footer-social a:focus-visible {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.18);
+      outline: none;
+    }
+
+    .footer-social svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .footer-meta {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .sticky-cta {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 48;
+      display: none;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(107, 84, 70, 0.12);
+      box-shadow: 0 20px 40px rgba(60, 44, 35, 0.18);
+      backdrop-filter: blur(16px);
+    }
+
+    .sticky-cta .btn {
+      flex: 1 1 0;
+      min-height: 48px;
+      padding-inline: 14px;
+      font-size: 0.96rem;
+    }
+
+    .reveal-ready [data-reveal] {
+      will-change: opacity, transform;
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .reveal-ready [data-reveal="text"] {
+      opacity: 0;
+      transform: translateY(18px);
+      transition:
+        opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal-ready [data-reveal="card"] {
+      opacity: 0;
+      transform: translateY(22px);
+      transition:
+        opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal-ready [data-reveal="image"] {
+      opacity: 0;
+      transform: translateY(28px) scale(0.965);
+      transition:
+        opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal-ready [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 941px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+      }
+
+      .split-media {
+        grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+      }
+
+      .split-media.reverse {
+        grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+      }
+
+      .split-media.reverse .image-card {
+        order: 2;
+      }
+
+      .split-media.reverse .content-card {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      :root {
+        --section-gap: 56px;
+      }
+
+      .service-grid,
+      .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .step-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 940px) {
+      :root {
+        --section-gap: 48px;
+      }
+
+      .site-shell {
+        padding-bottom: calc(var(--sticky-cta-height) + 24px);
+      }
+
+      .js .header-nav nav,
+      .js .header-nav .btn {
+        display: none;
+      }
+
+      .js .menu-toggle,
+      .js .sticky-cta {
+        display: flex;
+      }
+
+      .js .mobile-panel {
+        display: none;
+      }
+
+      .js .mobile-panel.is-open {
+        display: block;
+      }
+
+      .hero-card,
+      .contact-panel,
+      .contact-side,
+      .footer-card {
+        padding-inline: 20px;
+      }
+
+      .trust-strip-grid,
+      .grid-3,
+      .grid-2,
+      .service-grid,
+      .step-grid,
+      .testimonial-grid,
+      .contact-grid,
+      .contact-wrap,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-foot,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links,
+      .footer-social {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      :root {
+        --header-height: 80px;
+        --sticky-cta-height: 92px;
+      }
+
+      .container {
+        width: min(var(--container), calc(100vw - 24px));
+      }
+
+      .hero {
+        padding-top: 20px;
+      }
+
+      .hero-card {
+        padding: 14px;
+        border-radius: 32px;
+      }
+
+      .hero-copy {
+        gap: 16px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(2.3rem, 11vw, 3.4rem);
+      }
+
+      .hero-media,
+      .image-card,
+      .contact-visual {
+        min-height: 250px;
+      }
+
+      .hero-caption {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+      }
+
+      .trust-strip {
+        padding: 10px;
+        border-radius: 22px;
+      }
+
+      .trust-strip-item {
+        padding: 12px 14px;
+      }
+
+      .card,
+      .service-card,
+      .step-card,
+      .testimonial-card,
+      .trust-mini-card {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      .trust-mini-grid,
+      .service-grid,
+      .step-grid,
+      .testimonial-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reveal-ready [data-reveal] {
+        transform: translateY(18px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal-ready [data-reveal] {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="#top" aria-label="Back to top">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-copy">
+              <span class="brand-name" data-brand-name></span>
+              <span class="brand-tag" data-brand-tag></span>
+            </span>
+          </a>
+
+          <div class="header-nav">
+            <nav aria-label="Primary navigation">
+              <a href="#services">Services</a>
+              <a href="#about">About</a>
+              <a href="#how-it-works">How it works</a>
+              <a href="#faq">FAQ</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            <a class="btn btn-primary" href="#contact" data-header-cta></a>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+              <span class="menu-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-panel" id="mobileMenu" hidden>
+          <div class="mobile-panel-inner">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a class="btn btn-primary" href="#contact" data-mobile-cta></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-card surface">
+            <div class="hero-grid">
+              <div class="hero-copy" data-reveal="text">
+                <p class="eyebrow" data-hero-eyebrow></p>
+                <h1 data-hero-title></h1>
+                <p class="lede" data-hero-copy></p>
+                <p class="hero-assurance" data-hero-assurance></p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#contact" data-primary-cta></a>
+                  <a class="btn btn-secondary" href="tel:" data-phone-cta></a>
+                </div>
+                <div class="hero-notes">
+                  <div class="hero-note-row" id="heroChips"></div>
+                </div>
+              </div>
+
+              <div class="hero-media" data-reveal="image" style="--reveal-delay: 120ms;">
+                <img src="assets/ndis-template/photos/contact-photo.webp" alt="A warm family support conversation in a calm, welcoming setting." width="1400" height="1100" loading="eager" />
+                <div class="hero-caption" data-hero-caption></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="trust-strip surface" data-reveal="card" style="--reveal-delay: 140ms;">
+            <div class="trust-strip-grid" id="trustStrip"></div>
+          </div>
+
+          <div class="trust-mini-grid" id="introCards"></div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading" data-reveal="text">
+            <p class="eyebrow">Support that feels practical</p>
+            <h2 data-services-title></h2>
+            <p data-services-copy></p>
+          </div>
+          <div class="service-grid" id="servicesGrid"></div>
+          <div class="services-foot" data-reveal="card" style="--reveal-delay: 120ms;">
+            <p data-services-secondary-copy></p>
+            <div class="secondary-services" id="secondaryServices"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="split-media">
+            <div class="image-card" data-reveal="image">
+              <img src="assets/ndis-template/photos/about-photo.webp" alt="Two people walking together outdoors in warm natural light." width="1400" height="1100" loading="lazy" />
+            </div>
+            <div class="content-card" data-reveal="text" style="--reveal-delay: 120ms;">
+              <p class="eyebrow">About the provider</p>
+              <h2 data-about-title></h2>
+              <p data-about-copy></p>
+              <ul class="value-list" id="valueList"></ul>
+              <div class="hero-actions" style="padding-top: 8px;">
+                <a class="btn btn-secondary" href="#contact" data-about-cta></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="container">
+          <div class="section-heading" data-reveal="text">
+            <p class="eyebrow">Easy to get started</p>
+            <h2 data-process-title></h2>
+            <p data-process-copy></p>
+          </div>
+          <div class="step-grid" id="stepsGrid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="split-media reverse">
+            <div class="image-card" data-reveal="image">
+              <img src="assets/ndis-template/photos/why-photo.webp" alt="A support worker walking outdoors beside a person using a wheelchair." width="1400" height="1100" loading="lazy" />
+            </div>
+            <div class="content-card" data-reveal="text" style="--reveal-delay: 120ms;">
+              <p class="eyebrow">Why families choose us</p>
+              <h2 data-why-title></h2>
+              <p data-why-copy></p>
+              <div class="why-points" id="whyPoints"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonialsSection">
+        <div class="container">
+          <div class="section-heading" data-reveal="text">
+            <p class="eyebrow">Kind words</p>
+            <h2 data-testimonials-title></h2>
+            <p data-testimonials-copy></p>
+          </div>
+          <div class="testimonial-grid" id="testimonialsGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-heading" data-reveal="text">
+            <p class="eyebrow">Helpful answers</p>
+            <h2 data-faq-title></h2>
+            <p data-faq-copy></p>
+          </div>
+          <div class="faq-list" id="faqList"></div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="contact-wrap">
+            <div class="contact-panel" data-reveal="text">
+              <p class="eyebrow">Make an enquiry</p>
+              <h2 data-contact-title></h2>
+              <p class="section-copy" data-contact-copy></p>
+
+              <form name="ndis-provider-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+                <input type="hidden" name="form-name" value="ndis-provider-enquiry" />
+                <p hidden>
+                  <label>Do not fill this in: <input name="bot-field" /></label>
+                </p>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+                  </div>
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required />
+                  </div>
+                  <div class="field">
+                    <label for="region">Suburb or region</label>
+                    <input id="region" name="region" type="text" autocomplete="address-level2" required />
+                  </div>
+                  <div class="field full">
+                    <label for="support-type">Type of support needed</label>
+                    <select id="support-type" name="support-type" required>
+                      <option value="" selected disabled>Select support type</option>
+                    </select>
+                  </div>
+                  <div class="field full">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us a little about the support you are looking for and the best way to contact you."></textarea>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit" data-contact-submit></button>
+                  <a class="btn btn-secondary" href="tel:" data-contact-phone></a>
+                </div>
+              </form>
+            </div>
+
+            <aside class="contact-side" data-reveal="card" style="--reveal-delay: 120ms;">
+              <div class="image-card contact-visual">
+                <img src="assets/ndis-template/photos/hero-photo.webp" alt="A calm one-on-one support conversation in a welcoming room." width="1600" height="1100" loading="lazy" />
+              </div>
+              <div class="contact-grid" id="contactDetails"></div>
+              <div class="template-note" data-template-note></div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-card">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <div class="brand">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-copy">
+                  <span class="brand-name" data-brand-name></span>
+                  <span class="brand-tag" data-footer-tag></span>
+                </span>
+              </div>
+              <p data-footer-copy></p>
+            </div>
+            <div>
+              <div class="footer-links" id="footerLinks"></div>
+              <div class="footer-social" id="footerSocial" style="margin-top:12px;"></div>
+            </div>
+          </div>
+          <div class="footer-meta">
+            <p data-footer-contact></p>
+            <p data-footer-region></p>
+            <p data-footer-complaints></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="sticky-cta" aria-label="Quick contact actions">
+    <a class="btn btn-primary" href="tel:" data-sticky-call></a>
+    <a class="btn btn-secondary" href="#contact" data-sticky-enquiry></a>
+  </div>
+
+  <!-- Edit the JSON block below to reuse this template for a new client quickly. -->
+  <script id="site-config" type="application/json">
+    {
+      "businessName": "Harbour Lane Support",
+      "brandTag": "NDIS disability support in plain English",
+      "footerTag": "One-page NDIS website template",
+      "region": "Northern Rivers and surrounding communities",
+      "phoneDisplay": "0400 555 123",
+      "phoneHref": "0400555123",
+      "email": "hello@harbourlanesupport.com.au",
+      "headerCta": "Make an enquiry",
+      "hero": {
+        "eyebrow": "Warm, participant-friendly disability support",
+        "title": "Friendly NDIS support that feels clear from day one.",
+        "copy": "We help participants and families find practical support that fits everyday life, with calm communication and a team people feel comfortable talking to.",
+        "assurance": "Trusted by participants, carers and coordinators who want support explained in plain English.",
+        "caption": "Use a warm, natural hero image here that immediately feels safe, respectful and approachable.",
+        "chips": [
+          "Person-centred and respectful",
+          "Clear communication",
+          "Flexible support around real life"
+        ]
+      },
+      "trustStrip": [
+        {
+          "label": "Servicing",
+          "value": "Northern Rivers"
+        },
+        {
+          "label": "Communication",
+          "value": "Clear and responsive"
+        },
+        {
+          "label": "Funding",
+          "value": "Update to suit accepted funding types"
+        },
+        {
+          "label": "Registration",
+          "value": "Replace with exact registration wording"
+        }
+      ],
+      "intro": {
+        "cards": [
+          {
+            "icon": "heart",
+            "title": "Person-centred support",
+            "copy": "Use language that centres dignity, choice and practical help rather than jargon-heavy promises."
+          },
+          {
+            "icon": "chat",
+            "title": "Clear communication",
+            "copy": "Make it easy for families and coordinators to understand services, funding fit and next steps."
+          },
+          {
+            "icon": "hands",
+            "title": "Reliable and caring team",
+            "copy": "Show warmth and professionalism without making the provider feel stiff, clinical or government-like."
+          }
+        ]
+      },
+      "services": {
+        "title": "Feature the services people ask about first",
+        "copy": "Keep the homepage focused on the most important support areas, then list secondary supports more simply.",
+        "secondaryCopy": "Also available:",
+        "secondaryItems": [
+          "Personal Care",
+          "Capacity Building",
+          "In-home support",
+          "Short-term support planning"
+        ],
+        "items": [
+          {
+            "icon": "coordination",
+            "title": "Support Coordination",
+            "copy": "Help people understand their plan, connect with providers and keep supports working well together."
+          },
+          {
+            "icon": "plan",
+            "title": "Plan Management",
+            "copy": "Simple invoicing, budget tracking and clear updates so participants and families know where things stand."
+          },
+          {
+            "icon": "daily",
+            "title": "Daily Living Supports",
+            "copy": "Practical support at home with routines, confidence and the everyday tasks that matter most."
+          },
+          {
+            "icon": "community",
+            "title": "Community Access",
+            "copy": "Support to get out, stay connected and take part in work, appointments, activities and local life."
+          }
+        ]
+      },
+      "about": {
+        "title": "A provider story that feels human, not scripted",
+        "copy": "Use this section to explain who the provider is, what matters to the team and how support is delivered in everyday life.",
+        "cta": "Talk with our team",
+        "values": [
+          "We start with listening and take time to understand the person's goals, routines and preferences.",
+          "Support plans are built around everyday life, not around a rigid service model.",
+          "Participants, carers and coordinators know who they are speaking with and what to expect next."
+        ]
+      },
+      "process": {
+        "title": "A calm, simple way to get started",
+        "copy": "Keep this section tight and reassuring so the path from first enquiry to support feels easy to follow.",
+        "steps": [
+          {
+            "title": "Start with a conversation",
+            "copy": "We learn about the person, their goals and what kind of support would make day-to-day life easier."
+          },
+          {
+            "title": "Plan the right support",
+            "copy": "We talk through funding, preferences, timing and the supports that will be the best fit."
+          },
+          {
+            "title": "Deliver support with care",
+            "copy": "The focus stays on consistency, communication and support that can adapt as needs change."
+          }
+        ]
+      },
+      "whyChoose": {
+        "title": "Built to reassure families, carers and support coordinators",
+        "copy": "This section gives the provider room to speak about reliability, safety, flexibility and the way they show up for people over time.",
+        "items": [
+          {
+            "icon": "shield",
+            "title": "Reliable support",
+            "copy": "People know when support is happening, who is coming and how to reach the team if plans change."
+          },
+          {
+            "icon": "voice",
+            "title": "Respect and choice",
+            "copy": "Support is shaped around the participant's preferences, pace and right to make decisions."
+          },
+          {
+            "icon": "message",
+            "title": "Clear communication",
+            "copy": "Families and coordinators get straightforward updates without being buried in paperwork or jargon."
+          },
+          {
+            "icon": "sun",
+            "title": "Flexible approach",
+            "copy": "Services can adapt as goals, routines and support needs change over time."
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "Optional social proof",
+        "copy": "Only show testimonials when a client has genuine feedback ready to publish.",
+        "items": []
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "copy": "Keep the answers short, practical and written in everyday language. This section is especially helpful for first-time families and self-managed participants.",
+        "items": [
+          {
+            "question": "Who do you support?",
+            "answer": "Update this answer to describe the provider's participant profile clearly. For example, adults, children, psychosocial disability, community access or support coordination."
+          },
+          {
+            "question": "Do you work with self-managed and plan-managed participants?",
+            "answer": "Use exact wording here that matches the provider's accepted funding types. If they also work with NDIA-managed participants, say that clearly and only if it is accurate."
+          },
+          {
+            "question": "How do I get started?",
+            "answer": "A common answer is to invite people to call, email or use the enquiry form so the team can talk through support needs, funding and location."
+          },
+          {
+            "question": "Do you offer service agreements?",
+            "answer": "Explain whether the provider uses service agreements, how they are shared and who can ask questions before anything starts."
+          },
+          {
+            "question": "How do I make a complaint or provide feedback?",
+            "answer": "State the correct feedback and complaints pathway here, including phone, email and any policy or external escalation process that applies."
+          }
+        ]
+      },
+      "contact": {
+        "title": "Let's start with a simple conversation",
+        "copy": "Use the form for details, or call if talking is easier. Keep the close-out calm, encouraging and practical.",
+        "submit": "Send enquiry",
+        "phoneCta": "Call now"
+      },
+      "contactDetails": [
+        {
+          "title": "Call or text",
+          "body": "0400 555 123",
+          "linkLabel": "Call 0400 555 123",
+          "href": "tel:0400555123"
+        },
+        {
+          "title": "Email",
+          "body": "hello@harbourlanesupport.com.au",
+          "linkLabel": "Email hello@harbourlanesupport.com.au",
+          "href": "mailto:hello@harbourlanesupport.com.au"
+        },
+        {
+          "title": "Service area",
+          "body": "Northern Rivers and surrounding communities",
+          "linkLabel": "Update area wording",
+          "href": "#top"
+        },
+        {
+          "title": "Accepted funding types",
+          "body": "Edit to match self-managed, plan-managed and NDIA-managed settings.",
+          "linkLabel": "Update funding wording",
+          "href": "#top"
+        }
+      ],
+      "templateNote": "Before publishing for a real provider, update registration wording, accepted funding types, complaints information, policy links, and any claims about services or locations so they are accurate.",
+      "supportOptions": [
+        "Support Coordination",
+        "Plan Management",
+        "Daily Living Supports",
+        "Community Access",
+        "Personal Care",
+        "Capacity Building",
+        "Other"
+      ],
+      "footer": {
+        "copy": "A one-page template for NDIS providers that need to feel warm, trustworthy and easy to understand on both desktop and mobile.",
+        "links": [
+          {
+            "label": "Services",
+            "href": "#services"
+          },
+          {
+            "label": "About",
+            "href": "#about"
+          },
+          {
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "#contact"
+          },
+          {
+            "label": "Feedback & Complaints",
+            "href": "#contact"
+          },
+          {
+            "label": "Service Agreement",
+            "href": "#contact"
+          }
+        ],
+        "social": [
+          {
+            "icon": "facebook",
+            "label": "Facebook",
+            "href": "https://facebook.com/"
+          },
+          {
+            "icon": "instagram",
+            "label": "Instagram",
+            "href": "https://instagram.com/"
+          },
+          {
+            "icon": "linkedin",
+            "label": "LinkedIn",
+            "href": "https://linkedin.com/"
+          },
+          {
+            "icon": "youtube",
+            "label": "YouTube",
+            "href": "https://youtube.com/"
+          }
+        ],
+        "contact": "Email hello@harbourlanesupport.com.au | Phone 0400 555 123",
+        "region": "Service area: Northern Rivers and surrounding communities",
+        "complaints": "Feedback and complaints pathway: replace with the provider's correct process before launch."
+      }
+    }
+  </script>
+
+  <script>
+    const iconMap = {
+      heart: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 20.5s-7-4.35-7-10.1C5 7.36 7.06 5.5 9.55 5.5c1.49 0 2.92.76 3.45 1.94.53-1.18 1.96-1.94 3.45-1.94C18.94 5.5 21 7.36 21 10.4c0 5.75-7 10.1-7 10.1H12Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `,
+      chat: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 7.5h12a2.5 2.5 0 0 1 2.5 2.5v4A2.5 2.5 0 0 1 18 16.5H11l-4.5 3v-3H6A2.5 2.5 0 0 1 3.5 14v-4A2.5 2.5 0 0 1 6 7.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M8 11.5h8M8 14.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      hands: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 13.5 5.4 12a2 2 0 0 1 0-2.83l1.06-1.06a2 2 0 0 1 2.83 0L12 10.82l2.71-2.71a2 2 0 0 1 2.83 0L18.6 9.17a2 2 0 0 1 0 2.83L17 13.5l-5 5-5-5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      `,
+      coordination: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="6.5" cy="7" r="2.5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="17.5" cy="7" r="2.5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="17" r="2.5" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M8.8 8.3 10.8 14M15.2 8.3 13.2 14M9 7h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      plan: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="5" y="4.5" width="14" height="15" rx="2.5" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M8.5 9h7M8.5 12.5h7M8.5 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      daily: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12.5 9.2 8l3.1 3 6.7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 19.5h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      community: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="8" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="16" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M4.5 17c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5M10.5 17c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      care: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 20.5s-6-4.1-6-9.1c0-2.56 1.73-4.4 4.04-4.4 1.31 0 2.51.68 2.96 1.73.45-1.05 1.65-1.73 2.96-1.73C18.27 7 20 8.84 20 11.4c0 5-6 9.1-6 9.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M9.5 12h5M12 9.5v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      growth: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 17.5 10 13.5l3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 13V7h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `,
+      shield: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 20.5s6-2.91 6-8.66V6.78L12 4.5 6 6.78v5.06c0 5.75 6 8.66 6 8.66Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="m9.5 12.5 1.7 1.7 3.6-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `,
+      voice: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 15.5A3.5 3.5 0 0 0 15.5 12V8A3.5 3.5 0 1 0 8.5 8v4A3.5 3.5 0 0 0 12 15.5Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M6.5 12a5.5 5.5 0 1 0 11 0M12 18v2.5M9 20.5h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      message: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 7.5h12a2.5 2.5 0 0 1 2.5 2.5v4A2.5 2.5 0 0 1 18 16.5H9.8L5.5 19v-2.5H6A2.5 2.5 0 0 1 3.5 14v-4A2.5 2.5 0 0 1 6 7.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      `,
+      sun: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 4.5v2.2M12 17.3v2.2M4.5 12h2.2M17.3 12h2.2M6.8 6.8l1.6 1.6M15.6 15.6l1.6 1.6M17.2 6.8l-1.6 1.6M8.4 15.6l-1.6 1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      brochure: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6.5 5.5h8a3 3 0 0 1 3 3v10h-8a3 3 0 0 0-3 3v-16Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M9.5 9.5h5M9.5 13h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      policy: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 4.5h7l4 4v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-12a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M14 4.5V9h4M8.5 13h7M8.5 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      feedback: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5.5 7.5A2.5 2.5 0 0 1 8 5h8a2.5 2.5 0 0 1 2.5 2.5v5A2.5 2.5 0 0 1 16 15H11l-4.5 3v-3H8A2.5 2.5 0 0 1 5.5 12.5v-5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M9 10.5h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `,
+      facebook: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M13.5 20v-6.2h2.3l.4-2.8h-2.7V9.2c0-.8.3-1.5 1.6-1.5h1.3V5.3c-.2 0-.9-.3-2.2-.3-2.4 0-4 1.4-4 4v2h-2.2v2.8h2.2V20h3.3Z" fill="currentColor"/>
+        </svg>
+      `,
+      instagram: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4.5" y="4.5" width="15" height="15" rx="4.5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="17" cy="7.2" r="1" fill="currentColor"/>
+        </svg>
+      `,
+      linkedin: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="5" y="9.5" width="3" height="9.5" fill="currentColor"/>
+          <rect x="5" y="5" width="3" height="3" rx="1.5" fill="currentColor"/>
+          <path d="M11 19v-5.2c0-2.1 1.2-3.3 3-3.3s3 1.2 3 3.7V19h-3v-4.5c0-1-.4-1.7-1.4-1.7s-1.6.7-1.6 1.8V19h-3Z" fill="currentColor"/>
+        </svg>
+      `,
+      youtube: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20.5 8.2a2.8 2.8 0 0 0-2-2c-1.8-.5-6.5-.5-6.5-.5s-4.7 0-6.5.5a2.8 2.8 0 0 0-2 2c-.5 1.8-.5 3.8-.5 3.8s0 2 .5 3.8a2.8 2.8 0 0 0 2 2c1.8.5 6.5.5 6.5.5s4.7 0 6.5-.5a2.8 2.8 0 0 0 2-2c.5-1.8.5-3.8.5-3.8s0-2-.5-3.8Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="m10 15.2 5-3.2-5-3.2v6.4Z" fill="currentColor"/>
+        </svg>
+      `
+    };
+    (() => {
+      const asObject = (value) => value && typeof value === "object" && !Array.isArray(value) ? value : {};
+      const asArray = (value, fallback = []) => Array.isArray(value) ? value : fallback;
+      const textOr = (value, fallback) => typeof value === "string" && value.trim() ? value.trim() : fallback;
+
+      let rawConfig = {};
+      try {
+        rawConfig = JSON.parse(document.getElementById("site-config")?.textContent || "{}");
+      } catch (error) {
+        console.error("NDIS template config could not be parsed. Falling back to defaults.", error);
+      }
+
+      const root = asObject(rawConfig);
+      const hero = {
+        eyebrow: "Warm, participant-friendly disability support",
+        title: "Friendly NDIS support that feels clear from day one.",
+        copy: "We help participants and families find practical support that fits everyday life, with calm communication and a team people feel comfortable talking to.",
+        assurance: "Trusted by participants, carers and coordinators who want support explained in plain English.",
+        caption: "Use a warm, natural hero image here that immediately feels safe, respectful and approachable.",
+        chips: ["Person-centred and respectful", "Clear communication", "Flexible support around real life"],
+        ...asObject(root.hero)
+      };
+      const intro = {
+        cards: [
+          { icon: "heart", title: "Person-centred support", copy: "Use language that centres dignity, choice and practical help rather than jargon-heavy promises." },
+          { icon: "chat", title: "Clear communication", copy: "Make it easy for families and coordinators to understand services, funding fit and next steps." },
+          { icon: "hands", title: "Reliable and caring team", copy: "Show warmth and professionalism without making the provider feel stiff, clinical or government-like." }
+        ],
+        ...asObject(root.intro)
+      };
+      const services = {
+        title: "Feature the services people ask about first",
+        copy: "Keep the homepage focused on the most important support areas, then list secondary supports more simply.",
+        secondaryCopy: "Also available:",
+        secondaryItems: ["Personal Care", "Capacity Building"],
+        items: [
+          { icon: "coordination", title: "Support Coordination", copy: "Help people understand their plan, connect with providers and keep supports working well together." },
+          { icon: "plan", title: "Plan Management", copy: "Simple invoicing, budget tracking and clear updates so participants and families know where things stand." },
+          { icon: "daily", title: "Daily Living Supports", copy: "Practical support at home with routines, confidence and the everyday tasks that matter most." },
+          { icon: "community", title: "Community Access", copy: "Support to get out, stay connected and take part in work, appointments, activities and local life." }
+        ],
+        ...asObject(root.services)
+      };
+      const about = {
+        title: "A provider story that feels human, not scripted",
+        copy: "Use this section to explain who the provider is, what matters to the team and how support is delivered in everyday life.",
+        cta: "Talk with our team",
+        values: [
+          "We start with listening and take time to understand the person's goals, routines and preferences.",
+          "Support plans are built around everyday life, not around a rigid service model.",
+          "Participants, carers and coordinators know who they are speaking with and what to expect next."
+        ],
+        ...asObject(root.about)
+      };
+      const process = {
+        title: "A calm, simple way to get started",
+        copy: "Keep this section tight and reassuring so the path from first enquiry to support feels easy to follow.",
+        steps: [
+          { title: "Start with a conversation", copy: "We learn about the person, their goals and what kind of support would make day-to-day life easier." },
+          { title: "Plan the right support", copy: "We talk through funding, preferences, timing and the supports that will be the best fit." },
+          { title: "Deliver support with care", copy: "The focus stays on consistency, communication and support that can adapt as needs change." }
+        ],
+        ...asObject(root.process)
+      };
+      const whyChoose = {
+        title: "Built to reassure families, carers and support coordinators",
+        copy: "This section gives the provider room to speak about reliability, safety, flexibility and the way they show up for people over time.",
+        items: [
+          { icon: "shield", title: "Reliable support", copy: "People know when support is happening, who is coming and how to reach the team if plans change." },
+          { icon: "voice", title: "Respect and choice", copy: "Support is shaped around the participant's preferences, pace and right to make decisions." },
+          { icon: "message", title: "Clear communication", copy: "Families and coordinators get straightforward updates without being buried in paperwork or jargon." },
+          { icon: "sun", title: "Flexible approach", copy: "Services can adapt as goals, routines and support needs change over time." }
+        ],
+        ...asObject(root.whyChoose)
+      };
+      const testimonials = {
+        title: "Optional social proof",
+        copy: "Only show testimonials when a client has genuine feedback ready to publish.",
+        items: [],
+        ...asObject(root.testimonials)
+      };
+      const faq = {
+        title: "Frequently asked questions",
+        copy: "Keep the answers short, practical and written in everyday language.",
+        items: [
+          { question: "Who do you support?", answer: "Update this answer to describe the provider's participant profile clearly." },
+          { question: "Do you work with self-managed and plan-managed participants?", answer: "Use exact wording here that matches the provider's accepted funding types." },
+          { question: "How do I get started?", answer: "Invite people to call, email or use the enquiry form so the team can talk through support needs, funding and location." },
+          { question: "How do I make a complaint or provide feedback?", answer: "State the correct feedback and complaints pathway here, including phone, email and any policy or escalation process that applies." }
+        ],
+        ...asObject(root.faq)
+      };
+      const contact = {
+        title: "Let's start with a simple conversation",
+        copy: "Use the form for details, or call if talking is easier. Keep the close-out calm, encouraging and practical.",
+        submit: "Send enquiry",
+        phoneCta: "Call now",
+        ...asObject(root.contact)
+      };
+      const footer = {
+        copy: "A one-page template for NDIS providers that need to feel warm, trustworthy and easy to understand on both desktop and mobile.",
+        links: [
+          { label: "Services", href: "#services" },
+          { label: "About", href: "#about" },
+          { label: "FAQ", href: "#faq" },
+          { label: "Privacy Policy", href: "#contact" },
+          { label: "Feedback & Complaints", href: "#contact" },
+          { label: "Service Agreement", href: "#contact" }
+        ],
+        social: [
+          { icon: "facebook", label: "Facebook", href: "https://facebook.com/" },
+          { icon: "instagram", label: "Instagram", href: "https://instagram.com/" },
+          { icon: "linkedin", label: "LinkedIn", href: "https://linkedin.com/" },
+          { icon: "youtube", label: "YouTube", href: "https://youtube.com/" }
+        ],
+        contact: "Email hello@harbourlanesupport.com.au | Phone 0400 555 123",
+        region: "Service area: Northern Rivers and surrounding communities",
+        complaints: "Feedback and complaints pathway: replace with the provider's correct process before launch.",
+        ...asObject(root.footer)
+      };
+
+      const config = {
+        businessName: textOr(root.businessName, "Harbour Lane Support"),
+        brandTag: textOr(root.brandTag, "NDIS disability support in plain English"),
+        footerTag: textOr(root.footerTag, "One-page NDIS website template"),
+        region: textOr(root.region, "Northern Rivers and surrounding communities"),
+        phoneDisplay: textOr(root.phoneDisplay, "0400 555 123"),
+        phoneHref: textOr(root.phoneHref, "0400555123"),
+        email: textOr(root.email, "hello@harbourlanesupport.com.au"),
+        headerCta: textOr(root.headerCta, "Make an enquiry"),
+        templateNote: textOr(root.templateNote, "Before publishing for a real provider, update registration wording, accepted funding types, complaints information, policy links, and any claims about services or locations so they are accurate."),
+        supportOptions: asArray(root.supportOptions, ["Support Coordination", "Plan Management", "Daily Living Supports", "Community Access", "Other"]),
+        trustStrip: asArray(root.trustStrip, [
+          { label: "Servicing", value: "Northern Rivers" },
+          { label: "Communication", value: "Clear and responsive" },
+          { label: "Funding", value: "Update to suit accepted funding types" },
+          { label: "Registration", value: "Replace with exact registration wording" }
+        ]),
+        contactDetails: asArray(root.contactDetails, [
+          { title: "Call or text", body: "0400 555 123", linkLabel: "Call 0400 555 123", href: "tel:0400555123" },
+          { title: "Email", body: "hello@harbourlanesupport.com.au", linkLabel: "Email hello@harbourlanesupport.com.au", href: "mailto:hello@harbourlanesupport.com.au" },
+          { title: "Service area", body: "Northern Rivers and surrounding communities", linkLabel: "Update area wording", href: "#top" }
+        ]),
+        hero: { ...hero, chips: asArray(hero.chips, ["Person-centred and respectful", "Clear communication", "Flexible support around real life"]) },
+        intro: { ...intro, cards: asArray(intro.cards, []) },
+        services: { ...services, items: asArray(services.items, []).slice(0, 4), secondaryItems: asArray(services.secondaryItems, []) },
+        about: { ...about, values: asArray(about.values, []) },
+        process: { ...process, steps: asArray(process.steps, []).slice(0, 3) },
+        whyChoose: { ...whyChoose, items: asArray(whyChoose.items, []) },
+        testimonials: { ...testimonials, items: asArray(testimonials.items, []) },
+        faq: { ...faq, items: asArray(faq.items, []) },
+        contact,
+        footer: {
+          ...footer,
+          links: asArray(footer.links, []),
+          social: asArray(footer.social, [])
+        }
+      };
+
+      const setText = (selector, value) => {
+        document.querySelectorAll(selector).forEach((node) => {
+          node.textContent = textOr(value, "");
+        });
+      };
+
+      try {
+        setText("[data-brand-name]", config.businessName);
+        setText("[data-brand-tag]", config.brandTag);
+        setText("[data-footer-tag]", config.footerTag);
+        setText("[data-header-cta]", config.headerCta);
+        setText("[data-mobile-cta]", config.headerCta);
+        setText("[data-primary-cta]", config.headerCta);
+        setText("[data-hero-eyebrow]", config.hero.eyebrow);
+        setText("[data-hero-title]", config.hero.title);
+        setText("[data-hero-copy]", config.hero.copy);
+        setText("[data-hero-assurance]", config.hero.assurance);
+        setText("[data-hero-caption]", config.hero.caption);
+        setText("[data-services-title]", config.services.title);
+        setText("[data-services-copy]", config.services.copy);
+        setText("[data-services-secondary-copy]", config.services.secondaryCopy);
+        setText("[data-about-title]", config.about.title);
+        setText("[data-about-copy]", config.about.copy);
+        setText("[data-about-cta]", config.about.cta);
+        setText("[data-process-title]", config.process.title);
+        setText("[data-process-copy]", config.process.copy);
+        setText("[data-why-title]", config.whyChoose.title);
+        setText("[data-why-copy]", config.whyChoose.copy);
+        setText("[data-testimonials-title]", config.testimonials.title);
+        setText("[data-testimonials-copy]", config.testimonials.copy);
+        setText("[data-faq-title]", config.faq.title);
+        setText("[data-faq-copy]", config.faq.copy);
+        setText("[data-contact-title]", config.contact.title);
+        setText("[data-contact-copy]", config.contact.copy);
+        setText("[data-contact-submit]", config.contact.submit);
+        setText("[data-contact-phone]", config.contact.phoneCta);
+        setText("[data-template-note]", config.templateNote);
+        setText("[data-footer-copy]", config.footer.copy);
+        setText("[data-footer-contact]", config.footer.contact);
+        setText("[data-footer-region]", config.footer.region);
+        setText("[data-footer-complaints]", config.footer.complaints);
+        setText("[data-sticky-call]", "Call now");
+        setText("[data-sticky-enquiry]", config.headerCta);
+
+        const telephoneLinks = [
+          ...document.querySelectorAll("[data-phone-cta]"),
+          ...document.querySelectorAll("[data-contact-phone]"),
+          ...document.querySelectorAll("[data-sticky-call]")
+        ];
+
+        telephoneLinks.forEach((link) => {
+          link.setAttribute("href", `tel:${config.phoneHref}`);
+          if (!link.textContent.trim()) link.textContent = config.phoneDisplay;
+        });
+
+        const headerPhoneButton = document.querySelector("[data-phone-cta]");
+        if (headerPhoneButton) headerPhoneButton.textContent = `Call ${config.phoneDisplay}`;
+
+        const heroChips = document.getElementById("heroChips");
+        config.hero.chips.forEach((chip) => {
+          const span = document.createElement("span");
+          span.className = "hero-chip";
+          span.textContent = chip;
+          heroChips.appendChild(span);
+        });
+
+        const trustStrip = document.getElementById("trustStrip");
+        config.trustStrip.forEach((item) => {
+          const article = document.createElement("article");
+          article.className = "trust-strip-item";
+          article.innerHTML = `<strong>${textOr(item.label, "")}</strong><span>${textOr(item.value, "")}</span>`;
+          trustStrip.appendChild(article);
+        });
+
+        const introCards = document.getElementById("introCards");
+        config.intro.cards.forEach((card, index) => {
+          const article = document.createElement("article");
+          article.className = "trust-mini-card";
+          article.setAttribute("data-reveal", "card");
+          article.style.setProperty("--reveal-delay", `${index * 90}ms`);
+          article.innerHTML = `
+            <div class="intro-icon">${iconMap[card.icon] || iconMap.heart}</div>
+            <h3>${textOr(card.title, "")}</h3>
+            <p>${textOr(card.copy, "")}</p>
+          `;
+          introCards.appendChild(article);
+        });
+
+        const servicesGrid = document.getElementById("servicesGrid");
+        config.services.items.forEach((service, index) => {
+          const article = document.createElement("article");
+          article.className = `service-card${index === 0 ? " is-highlight" : ""}`;
+          article.setAttribute("data-reveal", index === 0 ? "image" : "card");
+          article.style.setProperty("--reveal-delay", `${index * 70}ms`);
+          article.innerHTML = `
+            <div class="service-icon">${iconMap[service.icon] || iconMap.coordination}</div>
+            <h3>${textOr(service.title, "")}</h3>
+            <p>${textOr(service.copy, "")}</p>
+          `;
+          servicesGrid.appendChild(article);
+        });
+
+        const secondaryServices = document.getElementById("secondaryServices");
+        config.services.secondaryItems.forEach((item) => {
+          const span = document.createElement("span");
+          span.className = "secondary-service";
+          span.textContent = textOr(item, "");
+          secondaryServices.appendChild(span);
+        });
+
+        const valueList = document.getElementById("valueList");
+        config.about.values.forEach((item) => {
+          const li = document.createElement("li");
+          li.innerHTML = `<span class="list-mark">+</span><span>${textOr(item, "")}</span>`;
+          valueList.appendChild(li);
+        });
+
+        const stepsGrid = document.getElementById("stepsGrid");
+        config.process.steps.forEach((step, index) => {
+          const article = document.createElement("article");
+          article.className = "step-card";
+          article.setAttribute("data-reveal", "card");
+          article.style.setProperty("--reveal-delay", `${index * 90}ms`);
+          article.innerHTML = `
+            <div class="step-number">${String(index + 1).padStart(2, "0")}</div>
+            <h3>${textOr(step.title, "")}</h3>
+            <p>${textOr(step.copy, "")}</p>
+          `;
+          stepsGrid.appendChild(article);
+        });
+
+        const whyPoints = document.getElementById("whyPoints");
+        config.whyChoose.items.forEach((item, index) => {
+          const div = document.createElement("div");
+          div.className = "why-item";
+          div.setAttribute("data-reveal", "card");
+          div.style.setProperty("--reveal-delay", `${index * 80}ms`);
+          div.innerHTML = `
+            <div class="why-item-icon">${iconMap[item.icon] || iconMap.shield}</div>
+            <div>
+              <strong>${textOr(item.title, "")}</strong>
+              <p>${textOr(item.copy, "")}</p>
+            </div>
+          `;
+          whyPoints.appendChild(div);
+        });
+
+        const testimonialsSection = document.getElementById("testimonialsSection");
+        const testimonialsGrid = document.getElementById("testimonialsGrid");
+        if (!config.testimonials.items.length) {
+          testimonialsSection.hidden = true;
+        } else {
+          config.testimonials.items.forEach((item, index) => {
+            const article = document.createElement("article");
+            article.className = "testimonial-card";
+            article.setAttribute("data-reveal", "card");
+            article.style.setProperty("--reveal-delay", `${index * 90}ms`);
+            article.innerHTML = `
+              <h3>“</h3>
+              <p class="testimonial-quote">${textOr(item.quote, "")}</p>
+              <div class="testimonial-meta">
+                <span class="testimonial-name">${textOr(item.name, "")}</span>
+                <span class="testimonial-role">${textOr(item.role, "")}</span>
+              </div>
+            `;
+            testimonialsGrid.appendChild(article);
+          });
+        }
+
+        const faqList = document.getElementById("faqList");
+        config.faq.items.forEach((item, index) => {
+          const details = document.createElement("details");
+          details.className = "faq-item";
+          details.setAttribute("data-reveal", "card");
+          details.style.setProperty("--reveal-delay", `${index * 70}ms`);
+          details.innerHTML = `
+            <summary class="faq-question">
+              <span>${textOr(item.question, "")}</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>${textOr(item.answer, "")}</p>
+            </div>
+          `;
+          faqList.appendChild(details);
+        });
+
+        const supportTypeSelect = document.getElementById("support-type");
+        config.supportOptions.forEach((option) => {
+          const node = document.createElement("option");
+          node.value = option;
+          node.textContent = option;
+          supportTypeSelect.appendChild(node);
+        });
+
+        const contactDetails = document.getElementById("contactDetails");
+        config.contactDetails.forEach((item, index) => {
+          const article = document.createElement("article");
+          article.className = "contact-detail";
+          article.innerHTML = `
+            <h3>${textOr(item.title, "")}</h3>
+            <p>${textOr(item.body, "")}</p>
+            <a href="${textOr(item.href, "#contact")}">${textOr(item.linkLabel, "Learn more")}</a>
+          `;
+          contactDetails.appendChild(article);
+        });
+
+        const footerLinks = document.getElementById("footerLinks");
+        config.footer.links.forEach((item) => {
+          const anchor = document.createElement("a");
+          anchor.href = textOr(item.href, "#contact");
+          anchor.textContent = textOr(item.label, "");
+          footerLinks.appendChild(anchor);
+        });
+
+        const footerSocial = document.getElementById("footerSocial");
+        config.footer.social.forEach((item) => {
+          const anchor = document.createElement("a");
+          anchor.href = textOr(item.href, "#");
+          anchor.setAttribute("aria-label", textOr(item.label, "Social link"));
+          anchor.target = "_blank";
+          anchor.rel = "noopener noreferrer";
+          anchor.innerHTML = iconMap[item.icon] || iconMap.facebook;
+          footerSocial.appendChild(anchor);
+        });
+
+        const mobileToggle = document.querySelector(".menu-toggle");
+        const mobilePanel = document.getElementById("mobileMenu");
+
+        if (mobileToggle && mobilePanel) {
+          mobilePanel.hidden = false;
+
+          const closeMobileMenu = () => {
+            mobileToggle.setAttribute("aria-expanded", "false");
+            mobilePanel.classList.remove("is-open");
+          };
+
+          const toggleMobileMenu = () => {
+            const expanded = mobileToggle.getAttribute("aria-expanded") === "true";
+            mobileToggle.setAttribute("aria-expanded", String(!expanded));
+            mobilePanel.classList.toggle("is-open", !expanded);
+          };
+
+          closeMobileMenu();
+          mobileToggle.addEventListener("click", toggleMobileMenu);
+
+          mobilePanel.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMobileMenu);
+          });
+
+          window.addEventListener("resize", () => {
+            if (window.innerWidth > 940) closeMobileMenu();
+          });
+        }
+
+        const revealNodes = document.querySelectorAll("[data-reveal]");
+        document.documentElement.classList.add("reveal-ready");
+        if ("IntersectionObserver" in window) {
+          const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          }, {
+            threshold: 0.18,
+            rootMargin: "0px 0px -8% 0px"
+          });
+
+          revealNodes.forEach((node) => revealObserver.observe(node));
+        } else {
+          revealNodes.forEach((node) => node.classList.add("is-visible"));
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", (event) => {
+            const targetId = anchor.getAttribute("href");
+            if (!targetId || targetId === "#") return;
+            const target = document.querySelector(targetId);
+            if (!target) return;
+            event.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        });
+      } catch (error) {
+        console.error("NDIS template initialisation failed.", error);
+        document.documentElement.classList.remove("reveal-ready");
+        document.querySelectorAll("[data-reveal]").forEach((node) => node.classList.add("is-visible"));
+      }
+    })();
+  </script>
+</body>
+</html>
