@@ -388,30 +388,49 @@
     }
 
     .hero-shell {
-      padding: 22px;
+      position: relative;
+      min-height: clamp(520px, 56vw, 640px);
+      padding: clamp(18px, 3vw, 30px);
       border-radius: 40px;
       overflow: clip;
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(255, 247, 239, 0.84)),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.6));
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      isolation: isolate;
+      background: rgba(255, 250, 245, 0.46);
     }
 
-    .hero-grid {
-      display: grid;
-      gap: 24px;
-      align-items: stretch;
+    .hero-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(105deg, rgba(255, 250, 245, 0.72) 0%, rgba(255, 250, 245, 0.44) 46%, rgba(255, 244, 235, 0.18) 100%),
+        linear-gradient(180deg, rgba(67, 48, 40, 0.08), rgba(255, 255, 255, 0.02));
+      pointer-events: none;
     }
 
     .hero-copy {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 520px);
+      margin-left: auto;
+      padding: clamp(24px, 3.6vw, 36px);
+      border-radius: 32px;
+      background: rgba(255, 251, 247, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      box-shadow: 0 20px 40px rgba(78, 57, 46, 0.12);
+      backdrop-filter: blur(14px);
       display: grid;
       gap: 20px;
       align-content: center;
-      padding: clamp(10px, 2vw, 16px);
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.9rem, 6.4vw, 5.4rem);
-      max-width: 11ch;
+      font-size: clamp(2.5rem, 4.8vw, 4.5rem);
+      max-width: 12ch;
+      line-height: 1.04;
     }
 
     .hero-proof-list {
@@ -457,31 +476,26 @@
       font-weight: 700;
     }
 
-    .media-frame {
-      position: relative;
-      min-height: 430px;
-      border-radius: 32px;
-      overflow: hidden;
-      background: #f2ece6;
-      box-shadow: var(--shadow-xl);
+    .hero-visual {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
     }
 
-    .media-frame picture,
-    .media-frame img {
+    .hero-visual,
+    .hero-visual picture,
+    .hero-visual img {
       width: 100%;
       height: 100%;
     }
 
-    .media-frame img {
+    .hero-visual picture {
+      display: block;
+    }
+
+    .hero-visual img {
       object-fit: cover;
-    }
-
-    .hero-media img {
-      object-position: center 18%;
-    }
-
-    .hero-media {
-      min-height: 560px;
+      object-position: center 44%;
     }
 
     .about-media img {
@@ -642,6 +656,22 @@
       color: var(--ink-700);
     }
 
+    .service-card,
+    .step-card,
+    .expect-card,
+    .contact-detail {
+      overflow: visible;
+    }
+
+    .service-card p,
+    .step-card p,
+    .expect-card p,
+    .contact-detail p,
+    .faq-aside p {
+      line-height: 1.58;
+      padding-bottom: 1px;
+    }
+
     .service-card.featured p {
       opacity: 0.96;
     }
@@ -791,7 +821,7 @@
     }
 
     .expect-card {
-      padding: 20px;
+      padding: 20px 20px 22px;
       border-radius: 22px;
       background: rgba(249, 245, 240, 0.9);
       border: 1px solid rgba(104, 82, 70, 0.08);
@@ -818,7 +848,7 @@
 
     .step-card {
       height: 100%;
-      padding: 24px;
+      padding: 24px 24px 26px;
       border-radius: 24px;
       background: linear-gradient(180deg, rgba(249, 245, 240, 0.76), rgba(255, 255, 255, 0.94));
       border: 1px solid rgba(104, 82, 70, 0.08);
@@ -1273,10 +1303,6 @@
     }
 
     @media (min-width: 941px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
-      }
-
       .contact-shell {
         grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
       }
@@ -1347,6 +1373,20 @@
         justify-content: flex-start;
       }
 
+      .hero-shell {
+        min-height: 0;
+      }
+
+      .hero-copy {
+        width: min(100%, 720px);
+      }
+
+      .hero-shell::before {
+        background:
+          linear-gradient(180deg, rgba(255, 250, 245, 0.74) 0%, rgba(255, 250, 245, 0.56) 56%, rgba(255, 244, 235, 0.32) 100%),
+          linear-gradient(180deg, rgba(67, 48, 40, 0.05), rgba(255, 255, 255, 0.02));
+      }
+
       .contact-media {
         min-height: 300px;
       }
@@ -1374,22 +1414,14 @@
 
       .hero-copy {
         gap: 16px;
+        width: 100%;
+        margin-left: 0;
+        padding: 22px 20px;
+        border-radius: 28px;
       }
 
       .hero-copy h1 {
-        font-size: clamp(2.35rem, 12vw, 3.5rem);
-      }
-
-      .media-frame {
-        min-height: 320px;
-      }
-
-      .hero-media {
-        min-height: 500px;
-      }
-
-      .hero-media img {
-        object-position: center 12%;
+        font-size: clamp(2.25rem, 11vw, 3.3rem);
       }
 
       .services-grid,
@@ -1413,6 +1445,12 @@
       .faq-aside,
       .contact-detail {
         padding: 22px;
+      }
+
+      .hero-shell::before {
+        background:
+          linear-gradient(180deg, rgba(255, 250, 245, 0.8) 0%, rgba(255, 250, 245, 0.6) 54%, rgba(255, 244, 235, 0.36) 100%),
+          linear-gradient(180deg, rgba(67, 48, 40, 0.04), rgba(255, 255, 255, 0.02));
       }
 
       .reveal-enhanced [data-reveal="text"],
@@ -1500,39 +1538,26 @@
       <section class="hero">
         <div class="container">
           <div class="hero-shell surface">
-            <div class="hero-grid">
-              <div class="hero-copy" data-reveal="text">
-                <p class="eyebrow">Registered NDIS provider in Northern Rivers</p>
-                <h1>NDIS support for adults and families across the Northern Rivers that feels clear from day one.</h1>
-                <p class="lede">Harbour Lane Support helps with Support Coordination, Plan Management, Daily Living Supports and Community Access across Ballina, Lismore, Byron Bay and nearby communities. We work with self-managed, plan-managed and NDIA-managed participants and explain each next step in plain English.</p>
-                <ul class="hero-proof-list">
-                  <li><span class="proof-dot">01</span><span>For participants, families, carers and support coordinators who want practical support without the jargon.</span></li>
-                  <li><span class="proof-dot">02</span><span>Exact registration status, funding fit and service area are clear before anyone is asked to commit.</span></li>
-                  <li><span class="proof-dot">03</span><span>You can start with a short call, a callback request, or a simple enquiry form.</span></li>
-                </ul>
-                <div class="hero-actions">
-                  <a class="btn btn-primary" href="#contact">Check if we’re the right fit</a>
-                  <a class="btn btn-ghost" href="tel:0400555123">Call 0400 555 123</a>
-                </div>
-                <p class="hero-note">You don’t need to have everything worked out before you contact us.</p>
-              </div>
+            <div class="hero-visual" aria-hidden="true" data-reveal="image">
+              <picture>
+                <img src="assets/ndis-template/photos/hhero.png" alt="" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async" />
+              </picture>
+            </div>
 
-              <div class="media-frame hero-media" data-reveal="image" style="--reveal-delay: 120ms;">
-                <picture>
-                  <source
-                    type="image/webp"
-                    srcset="
-                      assets/ndis-template/photos/hero-portrait-640.webp 640w,
-                      assets/ndis-template/photos/hero-portrait-960.webp 960w,
-                      assets/ndis-template/photos/hero-portrait.webp 1024w"
-                    sizes="(max-width: 940px) 100vw, 48vw" />
-                  <img src="assets/ndis-template/photos/Hero.png" alt="A smiling support worker beside an NDIS participant using a wheelchair outdoors in warm natural light." width="1024" height="1536" loading="eager" fetchpriority="high" decoding="async" />
-                </picture>
-                <div class="media-badge">
-                  <strong>Warm support with clear next steps</strong>
-                  <span>Usually replies within 1 business day and keeps communication straightforward for families and coordinators.</span>
-                </div>
+            <div class="hero-copy" data-reveal="text">
+              <p class="eyebrow">Registered NDIS provider in Northern Rivers</p>
+              <h1>NDIS support for adults and families across the Northern Rivers that feels clear from day one.</h1>
+              <p class="lede">Harbour Lane Support helps with Support Coordination, Plan Management, Daily Living Supports and Community Access across Ballina, Lismore, Byron Bay and nearby communities. We work with self-managed, plan-managed and NDIA-managed participants and explain each next step in plain English.</p>
+              <ul class="hero-proof-list">
+                <li><span class="proof-dot">01</span><span>For participants, families, carers and support coordinators who want practical support without the jargon.</span></li>
+                <li><span class="proof-dot">02</span><span>Exact registration status, funding fit and service area are clear before anyone is asked to commit.</span></li>
+                <li><span class="proof-dot">03</span><span>You can start with a short call, a callback request, or a simple enquiry form.</span></li>
+              </ul>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#contact">Check if we’re the right fit</a>
+                <a class="btn btn-ghost" href="tel:0400555123">Call 0400 555 123</a>
               </div>
+              <p class="hero-note">You don’t need to have everything worked out before you contact us.</p>
             </div>
           </div>
 
