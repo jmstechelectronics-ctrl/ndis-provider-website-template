@@ -389,13 +389,13 @@
 
     .hero-shell {
       position: relative;
-      min-height: clamp(420px, 40vw, 500px);
-      padding: clamp(24px, 3vw, 34px);
+      min-height: clamp(410px, 36vw, 480px);
+      padding: clamp(22px, 2.6vw, 32px);
       border-radius: 40px;
       overflow: clip;
-      display: flex;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 470px);
       align-items: center;
-      justify-content: flex-end;
       isolation: isolate;
       border: 1px solid rgba(255, 255, 255, 0.66);
       box-shadow: var(--shadow-xl);
@@ -408,7 +408,7 @@
       inset: 0;
       z-index: 1;
       background:
-        linear-gradient(90deg, rgba(255, 249, 242, 0.06) 0%, rgba(255, 248, 241, 0.12) 42%, rgba(255, 248, 241, 0.9) 100%),
+        linear-gradient(90deg, rgba(255, 249, 242, 0.02) 0%, rgba(255, 248, 241, 0.08) 44%, rgba(255, 248, 241, 0.58) 76%, rgba(255, 248, 241, 0.8) 100%),
         linear-gradient(180deg, rgba(76, 54, 43, 0.06), rgba(255, 255, 255, 0.02));
       pointer-events: none;
     }
@@ -416,8 +416,9 @@
     .hero-copy {
       position: relative;
       z-index: 2;
-      width: min(100%, 470px);
-      margin-left: auto;
+      width: 100%;
+      max-width: 470px;
+      justify-self: end;
       display: grid;
       gap: 16px;
       align-content: center;
@@ -436,8 +437,11 @@
     }
 
     .hero-copy .eyebrow {
-      background: rgba(255, 250, 245, 0.72);
-      border-color: rgba(47, 118, 110, 0.1);
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
     .hero-proof-list {
@@ -464,7 +468,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 250, 245, 0.72);
+      background: rgba(255, 250, 245, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.38);
       color: var(--teal-700);
       font-size: 0.86rem;
       font-weight: 800;
@@ -481,6 +486,7 @@
       margin: 0;
       color: var(--teal-700);
       font-weight: 700;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
     }
 
     .media-frame {
@@ -521,7 +527,7 @@
 
     .hero-visual img {
       object-fit: cover;
-      object-position: 26% 42%;
+      object-position: 26% 40%;
     }
 
     .about-media img {
@@ -1401,21 +1407,22 @@
 
       .hero-shell {
         min-height: 420px;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
         padding: 26px;
       }
 
       .hero-copy {
-        width: min(100%, 520px);
+        max-width: 460px;
       }
 
       .hero-shell::before {
         background:
-          linear-gradient(120deg, rgba(255, 249, 242, 0.08) 0%, rgba(255, 248, 241, 0.16) 38%, rgba(255, 248, 241, 0.86) 100%),
+          linear-gradient(120deg, rgba(255, 249, 242, 0.03) 0%, rgba(255, 248, 241, 0.12) 40%, rgba(255, 248, 241, 0.56) 76%, rgba(255, 248, 241, 0.82) 100%),
           linear-gradient(180deg, rgba(67, 48, 40, 0.04), rgba(255, 255, 255, 0.02));
       }
 
       .hero-visual img {
-        object-position: 30% 42%;
+        object-position: 28% 40%;
       }
 
       .contact-media {
@@ -1445,6 +1452,7 @@
 
       .hero-shell {
         min-height: 440px;
+        grid-template-columns: 1fr;
         align-items: flex-end;
         padding-block: 22px;
       }
@@ -1452,7 +1460,8 @@
       .hero-copy {
         gap: 16px;
         width: 100%;
-        margin-left: 0;
+        max-width: none;
+        justify-self: stretch;
       }
 
       .hero-copy h1 {
@@ -1492,12 +1501,12 @@
 
       .hero-shell::before {
         background:
-          linear-gradient(180deg, rgba(255, 249, 242, 0.14) 0%, rgba(255, 248, 241, 0.38) 52%, rgba(255, 248, 241, 0.9) 100%),
+          linear-gradient(180deg, rgba(255, 249, 242, 0.08) 0%, rgba(255, 248, 241, 0.24) 48%, rgba(255, 248, 241, 0.82) 100%),
           linear-gradient(180deg, rgba(67, 48, 40, 0.04), rgba(255, 255, 255, 0.02));
       }
 
       .hero-visual img {
-        object-position: 24% 40%;
+        object-position: 22% 38%;
       }
 
       .reveal-enhanced [data-reveal="text"],
