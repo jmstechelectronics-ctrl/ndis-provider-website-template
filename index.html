@@ -3,42 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A warm, mobile-first one-page website template for NDIS providers, built to feel human, trustworthy and easy to customise." />
+  <meta name="description" content="Harbour Lane Support offers clear, participant-friendly NDIS support across the Northern Rivers, with straightforward communication and an easy path to contact." />
   <meta name="robots" content="noindex, nofollow" />
-  <title>NDIS Provider Website Template</title>
-  <script>document.documentElement.classList.add("js");</script>
+  <title>Harbour Lane Support | NDIS Disability Support Northern Rivers</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232f766e'/%3E%3Ccircle cx='24' cy='22' r='8' fill='white'/%3E%3Cpath d='M22 41c8-7 15-6 21-15' stroke='white' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --sand-50: #fff9f4;
-      --sand-100: #f9efe6;
-      --sand-200: #f3e5d7;
-      --sand-300: #e7d0bc;
-      --sage-100: #e6efe8;
-      --sage-200: #d2e4d7;
-      --sage-300: #b4d1bc;
-      --coral-200: #f7d6bf;
-      --coral-400: #de9f78;
-      --coral-500: #c67d5c;
-      --teal-500: #2f7b72;
-      --teal-700: #1f5b56;
-      --ink-900: #2d211b;
-      --ink-700: #5e5149;
-      --ink-500: #7d7068;
+      --sand-50: #fffaf6;
+      --sand-100: #f5ebe1;
+      --sand-200: #ecdac8;
+      --sage-100: #e6efe7;
+      --sage-200: #d4e3d6;
+      --sage-500: #5c8a78;
+      --teal-500: #2f766e;
+      --teal-700: #1f5752;
+      --coral-400: #cf8662;
+      --coral-500: #b86747;
+      --ink-950: #241915;
+      --ink-900: #342621;
+      --ink-700: #65554c;
+      --ink-500: #8a7a72;
       --white: #ffffff;
-      --line: rgba(107, 84, 70, 0.12);
-      --shadow-soft: 0 24px 70px rgba(100, 76, 60, 0.14);
-      --shadow-card: 0 16px 36px rgba(100, 76, 60, 0.1);
-      --radius-xl: 36px;
-      --radius-lg: 26px;
-      --radius-md: 20px;
-      --radius-sm: 16px;
-      --container: 1180px;
-      --section-gap: 64px;
-      --header-height: 86px;
+      --line: rgba(92, 70, 58, 0.14);
+      --shadow-xl: 0 26px 70px rgba(78, 57, 46, 0.14);
+      --shadow-lg: 0 18px 42px rgba(78, 57, 46, 0.11);
+      --shadow-md: 0 12px 24px rgba(78, 57, 46, 0.08);
+      --radius-xl: 38px;
+      --radius-lg: 28px;
+      --radius-md: 22px;
+      --radius-sm: 18px;
+      --container: 1160px;
+      --section-gap: 56px;
+      --header-height: 84px;
       --sticky-cta-height: 86px;
+      --focus-ring: 0 0 0 4px rgba(47, 118, 110, 0.18);
     }
 
     * {
@@ -55,9 +56,9 @@
       font-family: "Plus Jakarta Sans", sans-serif;
       color: var(--ink-900);
       background:
-        radial-gradient(1000px 520px at 10% -6%, rgba(222, 159, 120, 0.28), transparent 58%),
-        radial-gradient(1100px 560px at 100% 0%, rgba(180, 209, 188, 0.34), transparent 54%),
-        linear-gradient(180deg, #fffaf6 0%, #f7efe7 100%);
+        radial-gradient(960px 500px at 8% -10%, rgba(207, 134, 98, 0.22), transparent 58%),
+        radial-gradient(900px 520px at 100% 0%, rgba(212, 227, 214, 0.34), transparent 54%),
+        linear-gradient(180deg, #fffaf6 0%, #f6efe8 100%);
       line-height: 1.6;
     }
 
@@ -78,6 +79,17 @@
       font: inherit;
     }
 
+    input,
+    select,
+    textarea {
+      appearance: none;
+    }
+
+    :focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
     .container {
       width: min(var(--container), calc(100vw - 32px));
       margin: 0 auto;
@@ -87,41 +99,15 @@
       padding-bottom: calc(var(--sticky-cta-height) + 18px);
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0 0 16px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(47, 123, 114, 0.16);
-      color: var(--teal-700);
-      font-size: 0.84rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--coral-500);
-      box-shadow: 0 0 0 6px rgba(222, 159, 120, 0.16);
-    }
-
     .section {
       padding: var(--section-gap) 0;
-      position: relative;
     }
 
     .section-heading {
       display: grid;
       gap: 14px;
-      margin-bottom: 30px;
-      max-width: 700px;
+      margin-bottom: 28px;
+      max-width: 720px;
     }
 
     .section-heading h2,
@@ -131,37 +117,112 @@
       font-family: "Fraunces", serif;
       font-weight: 700;
       letter-spacing: -0.04em;
-      line-height: 1;
+      line-height: 1.02;
+      color: var(--ink-950);
     }
 
     .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 3.3rem);
+      font-size: clamp(2.1rem, 4vw, 3.4rem);
     }
 
+    .section-copy,
     .section-heading p,
-    .lede,
-    .section-copy {
+    .lede {
       margin: 0;
       color: var(--ink-700);
       font-size: 1.02rem;
       max-width: 62ch;
     }
 
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 10px 15px;
+      width: fit-content;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(47, 118, 110, 0.14);
+      color: var(--teal-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--coral-500);
+      box-shadow: 0 0 0 5px rgba(184, 103, 71, 0.16);
+    }
+
     .surface {
-      position: relative;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(16px);
+    }
+
+    .calm-surface {
+      background: rgba(255, 250, 245, 0.9);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+      box-shadow: var(--shadow-md);
+    }
+
+    .flat-panel {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--teal-500), var(--teal-700));
+      box-shadow: 0 16px 28px rgba(47, 118, 110, 0.22);
+    }
+
+    .btn-secondary {
+      color: var(--teal-700);
+      background: rgba(255, 255, 255, 0.94);
+      border-color: rgba(47, 118, 110, 0.18);
+    }
+
+    .btn-ghost {
+      color: var(--ink-900);
+      background: transparent;
+      border-color: rgba(104, 82, 70, 0.16);
     }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 50;
-      border-bottom: 1px solid rgba(107, 84, 70, 0.08);
-      background: rgba(255, 249, 244, 0.78);
-      backdrop-filter: blur(18px);
+      background: rgba(255, 249, 244, 0.82);
+      border-bottom: 1px solid rgba(104, 82, 70, 0.08);
+      backdrop-filter: blur(16px);
     }
 
     .header-inner {
@@ -184,9 +245,9 @@
       height: 52px;
       border-radius: 18px;
       background:
-        radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.95), transparent 30%),
-        linear-gradient(135deg, #2f7b72, #8fc0a3 70%, #f0bf9a);
-      box-shadow: 0 14px 28px rgba(47, 123, 114, 0.22);
+        radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.94), transparent 28%),
+        linear-gradient(135deg, #2f766e, #8fbaa0 70%, #efbd98);
+      box-shadow: 0 14px 28px rgba(47, 118, 110, 0.24);
       position: relative;
       overflow: hidden;
       flex: 0 0 auto;
@@ -197,7 +258,7 @@
       content: "";
       position: absolute;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
     }
 
     .brand-mark::before {
@@ -210,22 +271,23 @@
     .brand-mark::after {
       width: 24px;
       height: 10px;
-      left: 18px;
+      left: 17px;
       bottom: 15px;
       transform: rotate(-24deg);
     }
 
     .brand-copy {
       display: grid;
-      gap: 3px;
+      gap: 2px;
       min-width: 0;
     }
 
     .brand-name {
       margin: 0;
+      font-size: 1.03rem;
       font-weight: 800;
-      font-size: 1.02rem;
       letter-spacing: -0.02em;
+      color: var(--ink-950);
     }
 
     .brand-tag {
@@ -243,78 +305,37 @@
     .header-nav nav {
       display: flex;
       align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
+      gap: 4px;
     }
 
     .header-nav nav a,
     .mobile-panel a {
       padding: 10px 14px;
       border-radius: 999px;
+      color: rgba(52, 38, 33, 0.84);
       font-weight: 700;
-      font-size: 0.96rem;
-      color: rgba(45, 33, 27, 0.84);
-      transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+      transition: background-color 180ms ease, color 180ms ease;
     }
 
     .header-nav nav a:hover,
     .header-nav nav a:focus-visible,
     .mobile-panel a:hover,
     .mobile-panel a:focus-visible {
-      background: rgba(47, 123, 114, 0.1);
+      background: rgba(47, 118, 110, 0.08);
       color: var(--teal-700);
-      outline: none;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 52px;
-      padding: 0 22px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-weight: 800;
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
-      cursor: pointer;
-    }
-
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-1px);
-      outline: none;
-    }
-
-    .btn-primary {
-      color: var(--white);
-      background: linear-gradient(135deg, var(--teal-500), var(--teal-700));
-      box-shadow: 0 16px 28px rgba(47, 123, 114, 0.24);
-    }
-
-    .btn-secondary {
-      color: var(--teal-700);
-      background: rgba(255, 255, 255, 0.82);
-      border-color: rgba(47, 123, 114, 0.18);
-    }
-
-    .btn-tertiary {
-      color: var(--ink-900);
-      background: rgba(255, 255, 255, 0.72);
-      border-color: rgba(107, 84, 70, 0.12);
     }
 
     .menu-toggle {
       display: none;
       width: 52px;
       height: 52px;
-      border: 1px solid rgba(107, 84, 70, 0.12);
+      padding: 0;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(104, 82, 70, 0.12);
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--ink-950);
       align-items: center;
       justify-content: center;
-      padding: 0;
-      color: var(--ink-900);
     }
 
     .menu-icon {
@@ -345,55 +366,83 @@
 
     .mobile-panel {
       display: none;
-      padding: 0 0 16px;
+      padding-bottom: 14px;
+    }
+
+    .mobile-panel.is-open {
+      display: block;
     }
 
     .mobile-panel-inner {
       display: grid;
       gap: 6px;
       padding: 12px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(107, 84, 70, 0.1);
-      border-radius: 22px;
-      box-shadow: var(--shadow-card);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+      box-shadow: var(--shadow-md);
     }
 
     .hero {
-      padding: 28px 0 30px;
+      padding: 26px 0 18px;
     }
 
-    .hero-card {
-      border-radius: 40px;
+    .hero-shell {
       padding: 22px;
+      border-radius: 40px;
       overflow: clip;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(255, 247, 239, 0.84)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.6));
     }
 
     .hero-grid {
       display: grid;
-      gap: 22px;
+      gap: 24px;
       align-items: stretch;
     }
 
     .hero-copy {
       display: grid;
-      align-content: center;
       gap: 20px;
-      padding: clamp(10px, 2vw, 14px);
+      align-content: center;
+      padding: clamp(10px, 2vw, 16px);
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.8rem, 6.4vw, 5.5rem);
+      font-size: clamp(2.9rem, 6.4vw, 5.4rem);
+      max-width: 11ch;
     }
 
-    .hero-copy .lede {
-      font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+    .hero-proof-list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
     }
 
-    .hero-assurance {
-      margin: -2px 0 2px;
+    .hero-proof-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      color: var(--ink-700);
+    }
+
+    .proof-dot {
+      width: 28px;
+      height: 28px;
+      margin-top: 2px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(47, 118, 110, 0.12);
       color: var(--teal-700);
+      font-size: 0.86rem;
       font-weight: 800;
-      font-size: 0.98rem;
+      flex: 0 0 auto;
     }
 
     .hero-actions {
@@ -402,513 +451,414 @@
       gap: 12px;
     }
 
-    .hero-notes {
-      display: grid;
-      gap: 12px;
-      padding-top: 6px;
-    }
-
-    .hero-note-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .hero-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 15px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid rgba(47, 123, 114, 0.14);
+    .hero-note {
+      margin: 0;
       color: var(--teal-700);
       font-weight: 700;
-      font-size: 0.94rem;
     }
 
-    .hero-chip::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--coral-500);
-      flex: 0 0 auto;
-    }
-
-    .hero-media {
+    .media-frame {
       position: relative;
-      min-height: 330px;
-      border-radius: 30px;
+      min-height: 430px;
+      border-radius: 32px;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 16% 16%, rgba(255, 255, 255, 0.78), transparent 26%),
-        linear-gradient(160deg, rgba(255, 255, 255, 0.68), rgba(245, 233, 221, 0.8));
-      border: 1px solid rgba(255, 255, 255, 0.82);
-      box-shadow: var(--shadow-card);
+      background: #f2ece6;
+      box-shadow: var(--shadow-xl);
     }
 
-    .hero-media img {
+    .media-frame picture,
+    .media-frame img {
       width: 100%;
       height: 100%;
+    }
+
+    .media-frame img {
       object-fit: cover;
     }
 
-    .hero-caption {
+    .hero-media img {
+      object-position: center 18%;
+    }
+
+    .hero-media {
+      min-height: 560px;
+    }
+
+    .about-media img {
+      object-position: center 36%;
+    }
+
+    .contact-media img {
+      object-position: center 28%;
+    }
+
+    .media-badge {
       position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-      padding: 14px 16px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      padding: 15px 16px;
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 18px 36px rgba(69, 49, 41, 0.12);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.94);
+      box-shadow: 0 18px 36px rgba(67, 48, 40, 0.12);
+    }
+
+    .media-badge strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+      color: var(--ink-950);
+    }
+
+    .media-badge span {
+      display: block;
       color: var(--ink-700);
-      font-size: 0.94rem;
+      font-size: 0.92rem;
     }
 
     .trust-strip {
-      margin-top: 16px;
-      padding: 12px;
+      padding: 10px;
       border-radius: 28px;
-      background: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(255, 255, 255, 0.82);
-      box-shadow: var(--shadow-card);
+      background: rgba(255, 255, 255, 0.86);
     }
 
     .trust-strip-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
+      gap: 10px;
     }
 
     .trust-strip-item {
       display: grid;
-      gap: 5px;
-      padding: 14px 16px;
+      gap: 6px;
+      padding: 16px 18px;
       border-radius: 22px;
-      background: rgba(249, 244, 238, 0.92);
-      border: 1px solid rgba(107, 84, 70, 0.08);
+      background: rgba(249, 245, 240, 0.94);
+      border: 1px solid rgba(104, 82, 70, 0.08);
     }
 
     .trust-strip-item strong {
-      font-size: 0.82rem;
-      text-transform: uppercase;
+      font-size: 0.8rem;
       letter-spacing: 0.03em;
+      text-transform: uppercase;
       color: var(--teal-700);
     }
 
     .trust-strip-item span {
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--ink-900);
-    }
-
-    .trust-mini-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-
-    .trust-mini-card {
-      padding: 20px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(107, 84, 70, 0.08);
-      box-shadow: 0 10px 24px rgba(100, 76, 60, 0.08);
-    }
-
-    .trust-mini-card h3 {
-      margin: 0 0 8px;
+      font-weight: 800;
+      color: var(--ink-950);
       font-size: 1rem;
-      letter-spacing: -0.03em;
     }
 
-    .trust-mini-card p {
-      margin: 0;
-      color: var(--ink-700);
-      font-size: 0.94rem;
+    .services-section {
+      padding-top: 44px;
     }
 
-    .grid-3,
-    .grid-2 {
-      display: grid;
-      gap: 20px;
+    .services-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
     }
 
-    .grid-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: center;
-    }
-
-    .card {
-      padding: 28px;
-      border-radius: 28px;
-      background: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(255, 255, 255, 0.82);
-      box-shadow: var(--shadow-card);
-    }
-
-    .intro-card h3,
-    .service-card h3,
-    .step-card h3,
-    .testimonial-card h3,
-    .resource-card h3,
-    .contact-detail h3 {
-      margin: 0 0 10px;
-      font-size: 1.25rem;
-      letter-spacing: -0.03em;
-    }
-
-    .intro-card p,
-    .service-card p,
-    .step-card p,
-    .why-list li,
-    .testimonial-card p,
-    .faq-answer p,
-    .resource-card p,
-    .contact-detail p,
-    .contact-detail a,
-    .template-note {
-      margin: 0;
-      color: var(--ink-700);
-    }
-
-    .intro-icon,
-    .service-icon,
-    .step-number,
-    .resource-icon {
-      width: 62px;
-      height: 62px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 20px;
-      margin-bottom: 18px;
-      background:
-        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.88), transparent 34%),
-        linear-gradient(145deg, rgba(47, 123, 114, 0.2), rgba(222, 159, 120, 0.28));
-      color: var(--teal-700);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
-    }
-
-    .intro-icon svg,
-    .service-icon svg,
-    .resource-icon svg {
-      width: 30px;
-      height: 30px;
-    }
-
-    .service-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 20px;
+      gap: 18px;
+      align-items: stretch;
     }
 
     .service-card {
       height: 100%;
       padding: 28px;
-      border-radius: 28px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(252, 246, 240, 0.92));
-      border: 1px solid rgba(255, 255, 255, 0.84);
-      box-shadow: var(--shadow-card);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
       position: relative;
       overflow: hidden;
     }
 
-    .service-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -50px -70px auto;
-      width: 160px;
-      height: 160px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(210, 228, 215, 0.55), transparent 65%);
+    .service-card.featured {
+      background:
+        radial-gradient(circle at 22% 16%, rgba(255, 255, 255, 0.16), transparent 25%),
+        linear-gradient(145deg, #2f766e, #3d6d67 62%, #708667 100%);
+      color: var(--white);
+      box-shadow: 0 22px 44px rgba(47, 118, 110, 0.22);
+    }
+
+    .service-card.featured p,
+    .service-card.featured h3,
+    .service-card.featured li {
+      color: var(--white);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal-700);
+      background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.92), transparent 32%),
+        linear-gradient(145deg, rgba(47, 118, 110, 0.18), rgba(207, 134, 98, 0.22));
+    }
+
+    .service-card.featured .service-icon {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
     }
 
     .service-card h3,
-    .service-card p {
-      position: relative;
-      z-index: 1;
+    .step-card h3,
+    .expect-card h3,
+    .contact-detail h3,
+    .faq-aside h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
     }
 
-    .service-card.is-highlight {
-      background:
-        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.18), transparent 24%),
-        linear-gradient(150deg, #2f7b72, #3a6f69 58%, #6f8865 100%);
-      color: var(--white);
-      box-shadow: 0 24px 44px rgba(47, 123, 114, 0.24);
-    }
-
-    .service-card.is-highlight p,
-    .service-card.is-highlight h3 {
-      color: var(--white);
-    }
-
-    .service-card.is-highlight .service-icon {
-      background: rgba(255, 255, 255, 0.14);
-      color: var(--white);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
-    }
-
-    .services-foot {
-      margin-top: 18px;
-      display: grid;
-      gap: 12px;
-      align-items: center;
-      grid-template-columns: minmax(0, 1fr) auto;
-      padding: 18px 22px;
-      border-radius: 24px;
-      background: rgba(249, 244, 238, 0.92);
-      border: 1px solid rgba(107, 84, 70, 0.08);
-    }
-
-    .services-foot p {
+    .service-card p,
+    .step-card p,
+    .expect-card p,
+    .contact-detail p,
+    .faq-aside p,
+    .footer-copy,
+    .footer-meta p {
       margin: 0;
       color: var(--ink-700);
     }
 
-    .secondary-services {
+    .service-card.featured p {
+      opacity: 0.96;
+    }
+
+    .service-copy {
+      flex: 1 1 auto;
+    }
+
+    .service-points {
+      display: grid;
+      gap: 8px;
+      padding: 0;
+      margin: auto 0 0;
+      list-style: none;
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 600;
+    }
+
+    .service-points li {
+      display: flex;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .service-points li::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      margin-top: 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      flex: 0 0 auto;
+    }
+
+    .services-footer {
+      margin-top: 18px;
+      padding: 18px 22px;
+      border-radius: 24px;
+      background: rgba(249, 245, 240, 0.88);
+      border: 1px solid rgba(104, 82, 70, 0.08);
+      display: grid;
+      gap: 12px;
+    }
+
+    .services-footer p {
+      margin: 0;
+      color: var(--ink-700);
+    }
+
+    .chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
 
-    .secondary-service {
+    .service-chip {
       display: inline-flex;
       align-items: center;
-      padding: 10px 14px;
+      min-height: 40px;
+      padding: 0 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(47, 123, 114, 0.14);
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(47, 118, 110, 0.14);
       color: var(--teal-700);
-      font-weight: 700;
       font-size: 0.92rem;
+      font-weight: 700;
     }
 
-    .split-media {
+    .about-section {
+      background: linear-gradient(180deg, rgba(237, 225, 213, 0.44), rgba(255, 249, 244, 0));
+    }
+
+    .about-shell {
       display: grid;
-      gap: 20px;
-      align-items: center;
+      gap: 24px;
+      align-items: stretch;
     }
 
-    .image-card {
-      position: relative;
-      min-height: 320px;
-      border-radius: 32px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.6), transparent 26%),
-        linear-gradient(160deg, rgba(255, 255, 255, 0.76), rgba(239, 228, 215, 0.94));
-      border: 1px solid rgba(255, 255, 255, 0.84);
-      box-shadow: var(--shadow-card);
+    .about-banner {
+      min-height: 340px;
     }
 
-    .image-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .about-panel {
+      padding: clamp(26px, 4vw, 40px);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      gap: 24px;
     }
 
-    .image-card::after {
-      content: "";
-      position: absolute;
-      inset: auto 22px 22px 22px;
-      height: 34px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(50, 33, 25, 0.06));
-      filter: blur(14px);
-      pointer-events: none;
-    }
-
-    .content-card {
-      padding: clamp(24px, 4vw, 42px);
-      border-radius: 32px;
-      background: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(255, 255, 255, 0.82);
-      box-shadow: var(--shadow-card);
-    }
-
-    .content-card h2 {
-      margin: 0 0 16px;
+    .about-panel h2 {
+      margin: 0;
       font-family: "Fraunces", serif;
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2rem, 4vw, 3.2rem);
       letter-spacing: -0.04em;
-      line-height: 1.04;
+      line-height: 1.05;
+      color: var(--ink-950);
     }
 
-    .content-card > p {
-      margin: 0 0 18px;
-      color: var(--ink-700);
-    }
-
-    .value-list,
-    .why-list {
+    .about-layout {
       display: grid;
-      gap: 14px;
+      grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .about-main {
+      display: grid;
+      gap: 22px;
+    }
+
+    .about-signals {
+      display: grid;
+      gap: 12px;
       padding: 0;
       margin: 0;
       list-style: none;
     }
 
-    .value-list li,
-    .why-list li {
+    .about-signals li {
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 12px;
       align-items: start;
-      padding: 15px 0;
-      border-top: 1px solid rgba(107, 84, 70, 0.1);
+      color: var(--ink-700);
     }
 
-    .value-list li:first-child,
-    .why-list li:first-child {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    .list-mark {
-      width: 28px;
-      height: 28px;
+    .check-mark {
+      width: 30px;
+      height: 30px;
       border-radius: 999px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(47, 123, 114, 0.12);
+      background: rgba(47, 118, 110, 0.12);
       color: var(--teal-700);
-      font-weight: 800;
-      margin-top: 2px;
+      font-weight: 900;
       flex: 0 0 auto;
     }
 
-    .step-grid {
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .expect-card {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(249, 245, 240, 0.9);
+      border: 1px solid rgba(104, 82, 70, 0.08);
+      display: grid;
+      gap: 8px;
+    }
+
+    .process-section {
+      padding-top: 44px;
+    }
+
+    .process-shell {
+      padding: clamp(24px, 4vw, 34px);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+    }
+
+    .process-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
     .step-card {
-      position: relative;
       height: 100%;
-      padding: 28px;
-      border-radius: 28px;
-      background: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(255, 255, 255, 0.84);
-      box-shadow: var(--shadow-card);
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(249, 245, 240, 0.76), rgba(255, 255, 255, 0.94));
+      border: 1px solid rgba(104, 82, 70, 0.08);
+      display: grid;
+      gap: 12px;
     }
 
     .step-number {
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--teal-700);
-    }
-
-    .why-points {
-      display: grid;
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    .why-item {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 16px;
-      padding: 18px 20px;
-      border-radius: 24px;
-      background: rgba(249, 244, 238, 0.92);
-      border: 1px solid rgba(107, 84, 70, 0.08);
-    }
-
-    .why-item-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(145deg, rgba(47, 123, 114, 0.18), rgba(222, 159, 120, 0.24));
+      background: rgba(47, 118, 110, 0.12);
       color: var(--teal-700);
-    }
-
-    .why-item-icon svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .why-item strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .testimonial-empty {
-      padding: 22px 24px;
-      border-radius: 24px;
-      background: rgba(249, 244, 238, 0.92);
-      border: 1px solid rgba(107, 84, 70, 0.08);
-      color: var(--ink-700);
-    }
-
-    .testimonial-card {
-      height: 100%;
-      padding: 28px;
-      border-radius: 28px;
-      background: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(255, 255, 255, 0.84);
-      box-shadow: var(--shadow-card);
-      display: grid;
-      gap: 18px;
-    }
-
-    .testimonial-quote {
-      font-size: 1.05rem;
-      line-height: 1.74;
-    }
-
-    .testimonial-meta {
-      display: grid;
-      gap: 4px;
-    }
-
-    .testimonial-name {
       font-weight: 800;
-      letter-spacing: -0.02em;
     }
 
-    .testimonial-role {
-      font-size: 0.94rem;
-      color: var(--ink-500);
+    .faq-shell {
+      display: grid;
+      gap: 24px;
     }
 
     .faq-list {
       display: grid;
-      gap: 14px;
+      gap: 12px;
     }
 
     .faq-item {
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(255, 255, 255, 0.84);
-      box-shadow: var(--shadow-card);
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+      box-shadow: var(--shadow-md);
       overflow: hidden;
     }
 
     .faq-question {
       width: 100%;
-      padding: 22px 24px;
+      padding: 21px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -916,22 +866,21 @@
       border: 0;
       background: transparent;
       text-align: left;
-      color: var(--ink-900);
       font-size: 1rem;
       font-weight: 800;
+      color: var(--ink-950);
       cursor: pointer;
+      list-style: none;
     }
 
     .faq-question::-webkit-details-marker,
     .faq-question::marker {
       display: none;
-      content: "";
     }
 
     .faq-question:hover,
     .faq-question:focus-visible {
-      outline: none;
-      background: rgba(47, 123, 114, 0.05);
+      background: rgba(47, 118, 110, 0.05);
     }
 
     .faq-icon {
@@ -941,10 +890,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(47, 123, 114, 0.1);
+      background: rgba(47, 118, 110, 0.1);
       color: var(--teal-700);
-      flex: 0 0 auto;
       position: relative;
+      flex: 0 0 auto;
     }
 
     .faq-icon::before,
@@ -968,49 +917,90 @@
     }
 
     .faq-answer {
-      padding: 0 24px 22px;
+      padding: 0 22px 20px;
     }
 
-    .faq-answer p + p {
-      margin-top: 12px;
+    .faq-answer p {
+      margin: 0;
+      color: var(--ink-700);
     }
 
-    .contact-grid {
+    .faq-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(230, 239, 231, 0.84), rgba(255, 255, 255, 0.96));
+      border: 1px solid rgba(47, 118, 110, 0.14);
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-cta-copy {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      gap: 6px;
+      max-width: 44rem;
     }
 
-    .contact-section .section-heading {
-      margin-bottom: 24px;
+    .faq-cta-copy h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
     }
 
-    .contact-wrap {
+    .faq-cta-copy p {
+      margin: 0;
+      color: var(--ink-700);
+    }
+
+    .faq-aside {
+      padding: 24px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(230, 239, 231, 0.84), rgba(255, 255, 255, 0.96));
+      border: 1px solid rgba(47, 118, 110, 0.14);
+      display: grid;
+      gap: 14px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-aside-note {
+      color: var(--teal-700);
+      font-weight: 700;
+    }
+
+    .contact-section {
+      padding-top: 46px;
+    }
+
+    .contact-shell {
       display: grid;
       gap: 22px;
-      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-      align-items: start;
+      align-items: stretch;
     }
 
-    .contact-panel,
-    .contact-side {
-      padding: clamp(24px, 4vw, 34px);
+    .contact-panel {
+      padding: clamp(26px, 4vw, 34px);
       border-radius: 34px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(255, 255, 255, 0.84);
-      box-shadow: var(--shadow-soft);
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: 100%;
     }
 
     .contact-panel h2 {
-      font-size: clamp(2.2rem, 4vw, 3.3rem);
-      margin-bottom: 14px;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
     }
 
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 24px;
+      margin-top: 2px;
     }
 
     .field {
@@ -1025,7 +1015,7 @@
     .field label {
       font-size: 0.92rem;
       font-weight: 800;
-      color: var(--ink-900);
+      color: var(--ink-950);
     }
 
     .field input,
@@ -1034,92 +1024,129 @@
       width: 100%;
       padding: 16px 18px;
       border-radius: 18px;
-      border: 1px solid rgba(107, 84, 70, 0.14);
-      background: rgba(255, 250, 247, 0.86);
-      color: var(--ink-900);
-      transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+      border: 1px solid rgba(104, 82, 70, 0.14);
+      background: rgba(255, 251, 248, 0.96);
+      color: var(--ink-950);
       resize: vertical;
+      transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
     }
 
     .field input:focus,
     .field select:focus,
     .field textarea:focus {
       outline: none;
-      border-color: rgba(47, 123, 114, 0.45);
-      box-shadow: 0 0 0 4px rgba(47, 123, 114, 0.12);
-      background: rgba(255, 255, 255, 0.96);
+      border-color: rgba(47, 118, 110, 0.44);
+      box-shadow: var(--focus-ring);
+      background: var(--white);
     }
 
     .form-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 20px;
+      margin-top: auto;
     }
 
     .contact-side {
       display: grid;
-      gap: 20px;
+      gap: 16px;
+      grid-template-rows: minmax(200px, 236px) auto 1fr;
+      height: 100%;
     }
 
-    .contact-visual {
-      min-height: 260px;
+    .contact-media {
+      min-height: 200px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      align-items: stretch;
+      grid-auto-rows: 1fr;
     }
 
     .contact-detail {
-      padding: 22px;
-      border-radius: 24px;
-      background: rgba(249, 244, 238, 0.88);
-      border: 1px solid rgba(107, 84, 70, 0.08);
+      height: 100%;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(104, 82, 70, 0.1);
+      box-shadow: var(--shadow-md);
       display: grid;
       gap: 8px;
+      align-content: start;
     }
 
-    .contact-detail a {
-      font-weight: 800;
-      color: var(--teal-700);
-    }
-
-    .template-note {
+    .contact-reassure {
+      display: grid;
+      gap: 10px;
       padding: 18px 20px;
       border-radius: 24px;
-      background: rgba(230, 239, 232, 0.72);
-      border: 1px solid rgba(47, 123, 114, 0.12);
-      font-size: 0.95rem;
+      background: rgba(249, 245, 240, 0.9);
+      border: 1px solid rgba(104, 82, 70, 0.08);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-reassure p {
+      margin: 0;
+      color: var(--ink-700);
+    }
+
+    .contact-detail a,
+    .footer-links a {
+      color: var(--teal-700);
+      font-weight: 800;
+    }
+
+    .contact-detail p,
+    .footer-meta p,
+    .footer-copy {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .contact-detail small {
+      color: var(--ink-500);
+      font-size: 0.88rem;
     }
 
     .site-footer {
-      padding: 30px 0 26px;
+      padding: 28px 0 26px;
     }
 
     .footer-card {
-      padding: 26px;
+      padding: 28px;
       border-radius: 32px;
-      background: rgba(45, 33, 27, 0.96);
+      background: rgba(36, 25, 21, 0.98);
       color: rgba(255, 255, 255, 0.78);
-      box-shadow: 0 26px 56px rgba(45, 33, 27, 0.2);
+      box-shadow: 0 26px 56px rgba(36, 25, 21, 0.24);
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
       gap: 22px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
       align-items: start;
     }
 
-    .footer-brand {
-      display: grid;
-      gap: 14px;
+    .footer-card .brand-name,
+    .footer-card .brand-tag {
+      color: var(--white);
     }
 
-    .footer-brand .brand {
-      color: var(--white);
+    .footer-copy {
+      max-width: 60ch;
+    }
+
+    .footer-nav {
+      display: grid;
+      gap: 14px;
     }
 
     .footer-links {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-end;
       gap: 8px;
     }
 
@@ -1127,13 +1154,18 @@
       padding: 10px 14px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.84);
-      font-weight: 700;
+      color: rgba(255, 255, 255, 0.88);
+      transition: background-color 180ms ease, transform 180ms ease;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
     }
 
     .footer-social {
       display: flex;
-      justify-content: flex-end;
       flex-wrap: wrap;
       gap: 10px;
     }
@@ -1145,18 +1177,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      color: rgba(255, 255, 255, 0.9);
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.86);
-      transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+      transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
     }
 
     .footer-social a:hover,
     .footer-social a:focus-visible {
-      transform: translateY(-1px);
       background: rgba(255, 255, 255, 0.16);
       border-color: rgba(255, 255, 255, 0.18);
-      outline: none;
+      transform: translateY(-1px);
     }
 
     .footer-social svg {
@@ -1180,12 +1211,12 @@
       bottom: 12px;
       z-index: 48;
       display: none;
-      gap: 12px;
+      gap: 10px;
       padding: 12px;
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(107, 84, 70, 0.12);
-      box-shadow: 0 20px 40px rgba(60, 44, 35, 0.18);
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(104, 82, 70, 0.12);
+      box-shadow: 0 20px 40px rgba(57, 41, 34, 0.16);
       backdrop-filter: blur(16px);
     }
 
@@ -1196,145 +1227,134 @@
       font-size: 0.96rem;
     }
 
-    .reveal-ready [data-reveal] {
-      will-change: opacity, transform;
-      transition-delay: var(--reveal-delay, 0ms);
+    .sticky-cta.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
     }
 
-    .reveal-ready [data-reveal="text"] {
+    .reveal-enhanced [data-reveal] {
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform, clip-path;
+    }
+
+    .reveal-enhanced [data-reveal="text"],
+    .reveal-enhanced [data-reveal="card"] {
       opacity: 0;
       transform: translateY(18px);
       transition:
-        opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
-        transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+        opacity 640ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .reveal-ready [data-reveal="card"] {
+    .reveal-enhanced [data-reveal="image"] {
       opacity: 0;
-      transform: translateY(22px);
+      transform: translateY(12px);
+      clip-path: inset(0 0 10% 0 round 32px);
       transition:
         opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
-        transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+        transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+        clip-path 900ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .reveal-ready [data-reveal="image"] {
-      opacity: 0;
-      transform: translateY(28px) scale(0.965);
-      transition:
-        opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
-        transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+    .reveal-enhanced [data-reveal="image"] img {
+      transform: scale(1.06);
+      transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .reveal-ready [data-reveal].is-visible {
+    .reveal-enhanced [data-reveal].is-visible {
       opacity: 1;
       transform: translateY(0);
+      clip-path: inset(0 round 32px);
+    }
+
+    .reveal-enhanced [data-reveal="image"].is-visible img {
+      transform: scale(1);
     }
 
     @media (min-width: 941px) {
       .hero-grid {
+        grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+      }
+
+      .contact-shell {
+        grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+      }
+
+      .about-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-shell {
         grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
-      }
-
-      .split-media {
-        grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
-      }
-
-      .split-media.reverse {
-        grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
-      }
-
-      .split-media.reverse .image-card {
-        order: 2;
-      }
-
-      .split-media.reverse .content-card {
-        order: 1;
       }
     }
 
     @media (max-width: 1100px) {
       :root {
-        --section-gap: 56px;
+        --section-gap: 50px;
       }
 
-      .service-grid,
-      .testimonial-grid {
+      .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .step-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .about-layout {
+        grid-template-columns: 1fr;
       }
 
-      .contact-grid {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-strip-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 940px) {
       :root {
-        --section-gap: 48px;
+        --section-gap: 46px;
       }
 
       .site-shell {
         padding-bottom: calc(var(--sticky-cta-height) + 24px);
       }
 
-      .js .header-nav nav,
-      .js .header-nav .btn {
+      .header-nav nav,
+      .header-nav .btn {
         display: none;
       }
 
-      .js .menu-toggle,
-      .js .sticky-cta {
+      .menu-toggle,
+      .sticky-cta {
         display: flex;
       }
 
-      .js .mobile-panel {
-        display: none;
-      }
-
-      .js .mobile-panel.is-open {
-        display: block;
-      }
-
-      .hero-card,
-      .contact-panel,
-      .contact-side,
-      .footer-card {
-        padding-inline: 20px;
-      }
-
-      .trust-strip-grid,
-      .grid-3,
-      .grid-2,
-      .service-grid,
-      .step-grid,
-      .testimonial-grid,
-      .contact-grid,
-      .contact-wrap,
-      .footer-grid {
+      .footer-grid,
+      .services-head,
+      .contact-shell,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .services-foot,
-      .footer-grid {
-        grid-template-columns: 1fr;
+      .services-head {
+        align-items: start;
       }
 
       .footer-links,
       .footer-social {
         justify-content: flex-start;
       }
+
+      .contact-media {
+        min-height: 300px;
+      }
     }
 
     @media (max-width: 720px) {
       :root {
-        --header-height: 80px;
+        --header-height: 78px;
         --sticky-cta-height: 92px;
       }
 
@@ -1343,12 +1363,13 @@
       }
 
       .hero {
-        padding-top: 20px;
+        padding-top: 18px;
       }
 
-      .hero-card {
-        padding: 14px;
-        border-radius: 32px;
+      .hero-shell,
+      .footer-card,
+      .contact-panel {
+        padding-inline: 18px;
       }
 
       .hero-copy {
@@ -1356,49 +1377,51 @@
       }
 
       .hero-copy h1 {
-        font-size: clamp(2.3rem, 11vw, 3.4rem);
+        font-size: clamp(2.35rem, 12vw, 3.5rem);
       }
 
-      .hero-media,
-      .image-card,
-      .contact-visual {
-        min-height: 250px;
+      .media-frame {
+        min-height: 320px;
       }
 
-      .hero-caption {
-        left: 14px;
-        right: 14px;
-        bottom: 14px;
+      .hero-media {
+        min-height: 500px;
       }
 
-      .trust-strip {
-        padding: 10px;
-        border-radius: 22px;
+      .hero-media img {
+        object-position: center 12%;
       }
 
-      .trust-strip-item {
-        padding: 12px 14px;
-      }
-
-      .card,
-      .service-card,
-      .step-card,
-      .testimonial-card,
-      .trust-mini-card {
-        padding: 22px;
-        border-radius: 24px;
-      }
-
-      .trust-mini-grid,
-      .service-grid,
-      .step-grid,
-      .testimonial-grid,
-      .contact-grid {
+      .services-grid,
+      .expect-grid,
+      .form-grid,
+      .trust-strip-grid {
         grid-template-columns: 1fr;
       }
 
-      .reveal-ready [data-reveal] {
-        transform: translateY(18px);
+      .faq-cta-row {
+        align-items: start;
+      }
+
+      .contact-side {
+        grid-template-rows: auto;
+      }
+
+      .service-card,
+      .step-card,
+      .expect-card,
+      .faq-aside,
+      .contact-detail {
+        padding: 22px;
+      }
+
+      .reveal-enhanced [data-reveal="text"],
+      .reveal-enhanced [data-reveal="card"] {
+        transform: translateY(14px);
+      }
+
+      .reveal-enhanced [data-reveal="image"] {
+        transform: translateY(8px);
       }
     }
 
@@ -1416,8 +1439,13 @@
         scroll-behavior: auto !important;
       }
 
-      .reveal-ready [data-reveal] {
+      .reveal-enhanced [data-reveal] {
         opacity: 1;
+        transform: none;
+        clip-path: inset(0 round 32px);
+      }
+
+      .reveal-enhanced [data-reveal="image"] img {
         transform: none;
       }
     }
@@ -1431,8 +1459,8 @@
           <a class="brand" href="#top" aria-label="Back to top">
             <span class="brand-mark" aria-hidden="true"></span>
             <span class="brand-copy">
-              <span class="brand-name" data-brand-name></span>
-              <span class="brand-tag" data-brand-tag></span>
+              <span class="brand-name">Harbour Lane Support</span>
+              <span class="brand-tag">NDIS disability support in plain English</span>
             </span>
           </a>
 
@@ -1444,7 +1472,7 @@
               <a href="#faq">FAQ</a>
               <a href="#contact">Contact</a>
             </nav>
-            <a class="btn btn-primary" href="#contact" data-header-cta></a>
+            <a class="btn btn-primary" href="#contact">Send enquiry</a>
             <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
               <span class="menu-icon" aria-hidden="true">
                 <span></span>
@@ -1462,7 +1490,7 @@
             <a href="#how-it-works">How it works</a>
             <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
-            <a class="btn btn-primary" href="#contact" data-mobile-cta></a>
+            <a class="btn btn-primary" href="#contact">Send enquiry</a>
           </div>
         </div>
       </div>
@@ -1471,127 +1499,320 @@
     <main id="top">
       <section class="hero">
         <div class="container">
-          <div class="hero-card surface">
+          <div class="hero-shell surface">
             <div class="hero-grid">
               <div class="hero-copy" data-reveal="text">
-                <p class="eyebrow" data-hero-eyebrow></p>
-                <h1 data-hero-title></h1>
-                <p class="lede" data-hero-copy></p>
-                <p class="hero-assurance" data-hero-assurance></p>
+                <p class="eyebrow">Registered NDIS provider in Northern Rivers</p>
+                <h1>NDIS support for adults and families across the Northern Rivers that feels clear from day one.</h1>
+                <p class="lede">Harbour Lane Support helps with Support Coordination, Plan Management, Daily Living Supports and Community Access across Ballina, Lismore, Byron Bay and nearby communities. We work with self-managed, plan-managed and NDIA-managed participants and explain each next step in plain English.</p>
+                <ul class="hero-proof-list">
+                  <li><span class="proof-dot">01</span><span>For participants, families, carers and support coordinators who want practical support without the jargon.</span></li>
+                  <li><span class="proof-dot">02</span><span>Exact registration status, funding fit and service area are clear before anyone is asked to commit.</span></li>
+                  <li><span class="proof-dot">03</span><span>You can start with a short call, a callback request, or a simple enquiry form.</span></li>
+                </ul>
                 <div class="hero-actions">
-                  <a class="btn btn-primary" href="#contact" data-primary-cta></a>
-                  <a class="btn btn-secondary" href="tel:" data-phone-cta></a>
+                  <a class="btn btn-primary" href="#contact">Check if we’re the right fit</a>
+                  <a class="btn btn-ghost" href="tel:0400555123">Call 0400 555 123</a>
                 </div>
-                <div class="hero-notes">
-                  <div class="hero-note-row" id="heroChips"></div>
+                <p class="hero-note">You don’t need to have everything worked out before you contact us.</p>
+              </div>
+
+              <div class="media-frame hero-media" data-reveal="image" style="--reveal-delay: 120ms;">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/ndis-template/photos/hero-portrait-640.webp 640w,
+                      assets/ndis-template/photos/hero-portrait-960.webp 960w,
+                      assets/ndis-template/photos/hero-portrait.webp 1024w"
+                    sizes="(max-width: 940px) 100vw, 48vw" />
+                  <img src="assets/ndis-template/photos/Hero.png" alt="A smiling support worker beside an NDIS participant using a wheelchair outdoors in warm natural light." width="1024" height="1536" loading="eager" fetchpriority="high" decoding="async" />
+                </picture>
+                <div class="media-badge">
+                  <strong>Warm support with clear next steps</strong>
+                  <span>Usually replies within 1 business day and keeps communication straightforward for families and coordinators.</span>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="hero-media" data-reveal="image" style="--reveal-delay: 120ms;">
-                <img src="assets/ndis-template/photos/contact-photo.webp" alt="A warm family support conversation in a calm, welcoming setting." width="1400" height="1100" loading="eager" />
-                <div class="hero-caption" data-hero-caption></div>
+          <div class="trust-strip surface" data-reveal="card" style="--reveal-delay: 120ms; margin-top: 16px;">
+            <div class="trust-strip-grid">
+              <article class="trust-strip-item">
+                <strong>Service area</strong>
+                <span>Northern Rivers, NSW</span>
+              </article>
+              <article class="trust-strip-item">
+                <strong>Registration</strong>
+                <span>Registered NDIS provider</span>
+              </article>
+              <article class="trust-strip-item">
+                <strong>Funding types</strong>
+                <span>Self, plan and NDIA managed</span>
+              </article>
+              <article class="trust-strip-item">
+                <strong>Response time</strong>
+                <span>Usually within 1 business day</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="container">
+          <div class="services-head">
+            <div class="section-heading" data-reveal="text">
+              <p class="eyebrow">Services</p>
+              <h2>Support that is easy to understand and easy to start.</h2>
+              <p>We keep the homepage focused on the support areas people usually ask about first, then make it easy to talk through anything more specific.</p>
+            </div>
+            <a class="btn btn-secondary" href="#contact" data-reveal="card">Talk about your support needs</a>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card featured" data-reveal="image">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="6.5" cy="7" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                  <circle cx="17.5" cy="7" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                  <circle cx="12" cy="17" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                  <path d="M8.8 8.3 10.8 14M15.2 8.3 13.2 14M9 7h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <h3>Support Coordination</h3>
+              <p class="service-copy">Help to understand a plan, connect the right providers, and keep supports working together in a way that makes everyday life easier.</p>
+              <ul class="service-points">
+                <li>Clear guidance around providers, goals and service fit</li>
+                <li>Straightforward updates for participants, carers and coordinators</li>
+                <li>Practical support when needs or routines change</li>
+              </ul>
+            </article>
+
+            <article class="service-card" data-reveal="card" style="--reveal-delay: 70ms;">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="5" y="4.5" width="14" height="15" rx="2.5" stroke="currentColor" stroke-width="1.8"></rect>
+                  <path d="M8.5 9h7M8.5 12.5h7M8.5 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <h3>Plan Management</h3>
+              <p class="service-copy">Simple invoice processing, budget tracking and updates that help people feel informed instead of overwhelmed.</p>
+            </article>
+
+            <article class="service-card" data-reveal="card" style="--reveal-delay: 120ms;">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12.5 9.2 8l3.1 3 6.7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M6 19.5h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <h3>Daily Living Supports</h3>
+              <p class="service-copy">Practical in-home help with routines, confidence, independence and the tasks that matter most day to day.</p>
+            </article>
+
+            <article class="service-card" data-reveal="card" style="--reveal-delay: 160ms;">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="8" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                  <circle cx="16" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                  <path d="M4.5 17c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5M10.5 17c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <h3>Community Access</h3>
+              <p class="service-copy">Support to attend appointments, get out in the community, build confidence and stay connected to everyday life.</p>
+            </article>
+          </div>
+
+          <div class="services-footer calm-surface" data-reveal="card" style="--reveal-delay: 180ms;">
+            <p>Also available: Personal Care, In-home support, Capacity Building and short-term support planning.</p>
+            <div class="chip-row" aria-label="Additional services">
+              <span class="service-chip">Personal Care</span>
+              <span class="service-chip">Capacity Building</span>
+              <span class="service-chip">In-home support</span>
+              <span class="service-chip">Short-term planning</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="container">
+          <div class="about-shell">
+            <div class="media-frame about-media about-banner" data-reveal="image">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/ndis-template/photos/why-photo-640.webp 640w,
+                    assets/ndis-template/photos/why-photo-960.webp 960w,
+                    assets/ndis-template/photos/why-photo.webp 1400w"
+                  sizes="100vw" />
+                <img src="assets/ndis-template/photos/why-photo.webp" alt="A support worker and participant outdoors in warm natural light, moving through everyday life together." width="1400" height="1100" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+
+            <div class="about-panel" data-reveal="text" style="--reveal-delay: 120ms;">
+              <div class="about-layout">
+                <div class="about-main">
+                  <p class="eyebrow">About + Why choose us</p>
+                  <h2>Consistent support, clear communication and a team families can rely on.</h2>
+                  <p class="section-copy">Harbour Lane Support is designed around practical help, familiar faces and honest communication. We focus on what works in everyday life, explain funding and next steps clearly, and stay responsive when needs change.</p>
+
+                  <ul class="about-signals">
+                    <li><span class="check-mark">+</span><span>We start by understanding the person, their routine, what matters most to them and what support will actually be useful.</span></li>
+                    <li><span class="check-mark">+</span><span>Families and coordinators get straightforward updates instead of vague promises or paperwork-heavy language.</span></li>
+                    <li><span class="check-mark">+</span><span>If something is not the right fit, we say so early and explain the next best step.</span></li>
+                  </ul>
+
+                  <div class="hero-actions">
+                    <a class="btn btn-secondary" href="#contact">Talk about your support needs</a>
+                  </div>
+                </div>
+
+                <div class="expect-grid">
+                  <article class="expect-card" data-reveal="card" style="--reveal-delay: 160ms;">
+                    <h3>What families can expect</h3>
+                    <p>Reliable appointment times, clear communication and support that feels respectful from the first conversation.</p>
+                  </article>
+                  <article class="expect-card" data-reveal="card" style="--reveal-delay: 220ms;">
+                    <h3>How we communicate</h3>
+                    <p>Phone and email stay easy to find, and most enquiries get a response within one business day.</p>
+                  </article>
+                  <article class="expect-card" data-reveal="card" style="--reveal-delay: 280ms;">
+                    <h3>How support is shaped</h3>
+                    <p>Support plans are built around goals, preferences, routines and the funding arrangement that applies.</p>
+                  </article>
+                  <article class="expect-card" data-reveal="card" style="--reveal-delay: 340ms;">
+                    <h3>What happens after contact</h3>
+                    <p>We confirm service area and support fit, then walk through the next step clearly and without pressure.</p>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="trust-strip surface" data-reveal="card" style="--reveal-delay: 140ms;">
-            <div class="trust-strip-grid" id="trustStrip"></div>
-          </div>
-
-          <div class="trust-mini-grid" id="introCards"></div>
         </div>
       </section>
 
-      <section class="section" id="services">
+      <section class="section process-section" id="how-it-works">
         <div class="container">
-          <div class="section-heading" data-reveal="text">
-            <p class="eyebrow">Support that feels practical</p>
-            <h2 data-services-title></h2>
-            <p data-services-copy></p>
-          </div>
-          <div class="service-grid" id="servicesGrid"></div>
-          <div class="services-foot" data-reveal="card" style="--reveal-delay: 120ms;">
-            <p data-services-secondary-copy></p>
-            <div class="secondary-services" id="secondaryServices"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="container">
-          <div class="split-media">
-            <div class="image-card" data-reveal="image">
-              <img src="assets/ndis-template/photos/about-photo.webp" alt="Two people walking together outdoors in warm natural light." width="1400" height="1100" loading="lazy" />
+          <div class="process-shell">
+            <div class="section-heading" data-reveal="text">
+              <p class="eyebrow">How it works</p>
+              <h2>Three simple steps from first contact to consistent support.</h2>
+              <p>The process is designed to feel calm and practical, not like an application form or a hard sell.</p>
             </div>
-            <div class="content-card" data-reveal="text" style="--reveal-delay: 120ms;">
-              <p class="eyebrow">About the provider</p>
-              <h2 data-about-title></h2>
-              <p data-about-copy></p>
-              <ul class="value-list" id="valueList"></ul>
-              <div class="hero-actions" style="padding-top: 8px;">
-                <a class="btn btn-secondary" href="#contact" data-about-cta></a>
-              </div>
+
+            <div class="process-grid">
+              <article class="step-card" data-reveal="card">
+                <span class="step-number">01</span>
+                <h3>Start with a conversation</h3>
+                <p>Tell us who support is for, what help is needed and which suburbs or towns matter most.</p>
+              </article>
+              <article class="step-card" data-reveal="card" style="--reveal-delay: 90ms;">
+                <span class="step-number">02</span>
+                <h3>Check fit and funding</h3>
+                <p>We talk through registration, funding type, availability and whether our service is the right fit.</p>
+              </article>
+              <article class="step-card" data-reveal="card" style="--reveal-delay: 180ms;">
+                <span class="step-number">03</span>
+                <h3>Confirm next steps clearly</h3>
+                <p>If it looks like a good match, we explain the service agreement, timing and what happens next in plain English.</p>
+              </article>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section" id="how-it-works">
-        <div class="container">
-          <div class="section-heading" data-reveal="text">
-            <p class="eyebrow">Easy to get started</p>
-            <h2 data-process-title></h2>
-            <p data-process-copy></p>
-          </div>
-          <div class="step-grid" id="stepsGrid"></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="split-media reverse">
-            <div class="image-card" data-reveal="image">
-              <img src="assets/ndis-template/photos/why-photo.webp" alt="A support worker walking outdoors beside a person using a wheelchair." width="1400" height="1100" loading="lazy" />
-            </div>
-            <div class="content-card" data-reveal="text" style="--reveal-delay: 120ms;">
-              <p class="eyebrow">Why families choose us</p>
-              <h2 data-why-title></h2>
-              <p data-why-copy></p>
-              <div class="why-points" id="whyPoints"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="testimonialsSection">
-        <div class="container">
-          <div class="section-heading" data-reveal="text">
-            <p class="eyebrow">Kind words</p>
-            <h2 data-testimonials-title></h2>
-            <p data-testimonials-copy></p>
-          </div>
-          <div class="testimonial-grid" id="testimonialsGrid"></div>
         </div>
       </section>
 
       <section class="section" id="faq">
         <div class="container">
-          <div class="section-heading" data-reveal="text">
-            <p class="eyebrow">Helpful answers</p>
-            <h2 data-faq-title></h2>
-            <p data-faq-copy></p>
+          <div class="faq-shell">
+            <div class="section-heading" data-reveal="text">
+              <p class="eyebrow">FAQ</p>
+              <h2>Helpful answers that reduce hesitation before you contact us.</h2>
+              <p>These are the questions people usually ask before they pick up the phone or send an enquiry.</p>
+            </div>
+
+            <div class="faq-list">
+              <details class="faq-item" data-reveal="card">
+                <summary class="faq-question">
+                  <span>Who do you support?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Harbour Lane Support works with adults and families who need practical NDIS support, especially around Support Coordination, Daily Living Supports, Community Access and Plan Management.</p>
+                </div>
+              </details>
+
+              <details class="faq-item" data-reveal="card" style="--reveal-delay: 60ms;">
+                <summary class="faq-question">
+                  <span>What funding types do you accept?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <p>We currently work with self-managed, plan-managed and NDIA-managed participants. If you are unsure what applies, we can talk it through with you.</p>
+                </div>
+              </details>
+
+              <details class="faq-item" data-reveal="card" style="--reveal-delay: 120ms;">
+                <summary class="faq-question">
+                  <span>What happens after I contact you?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <p>We ask a few simple questions about the person, location and support needed, then let you know whether we are the right fit and what the next step looks like.</p>
+                </div>
+              </details>
+
+              <details class="faq-item" data-reveal="card" style="--reveal-delay: 180ms;">
+                <summary class="faq-question">
+                  <span>How quickly do you respond?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Most calls and enquiries are answered within one business day. If we need more detail before confirming fit, we will let you know clearly.</p>
+                </div>
+              </details>
+
+              <details class="faq-item" data-reveal="card" style="--reveal-delay: 240ms;">
+                <summary class="faq-question">
+                  <span>Do you service my suburb?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <p>We support participants across the Northern Rivers including Ballina, Lismore, Byron Bay and nearby communities. If you are just outside those areas, ask and we will confirm availability.</p>
+                </div>
+              </details>
+
+              <details class="faq-item" data-reveal="card" style="--reveal-delay: 300ms;">
+                <summary class="faq-question">
+                  <span>How do feedback and complaints work?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-answer">
+                  <p>You can raise feedback or concerns by phone, email or through our complaints page. We take concerns seriously, explain the process clearly and document follow-up steps.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-cta-row" data-reveal="card" style="--reveal-delay: 140ms;">
+              <div class="faq-cta-copy">
+                <h3>Prefer a callback instead?</h3>
+                <p>If a quick chat is easier, request a callback and we can talk through service area, support type and next steps without pressure.</p>
+              </div>
+              <a class="btn btn-secondary" href="#contact">Request a callback</a>
+            </div>
           </div>
-          <div class="faq-list" id="faqList"></div>
         </div>
       </section>
 
       <section class="section contact-section" id="contact">
         <div class="container">
-          <div class="contact-wrap">
+          <div class="contact-shell">
             <div class="contact-panel" data-reveal="text">
-              <p class="eyebrow">Make an enquiry</p>
-              <h2 data-contact-title></h2>
-              <p class="section-copy" data-contact-copy></p>
+              <p class="eyebrow">Contact</p>
+              <h2>Send an enquiry or ask for a quick call back.</h2>
+              <p class="section-copy">You don’t need to have everything worked out before contacting us. We’ll explain the next steps clearly, answer questions about funding and service area, and let you know honestly whether we are the right fit.</p>
 
               <form name="ndis-provider-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
                 <input type="hidden" name="form-name" value="ndis-provider-enquiry" />
@@ -1619,26 +1840,73 @@
                     <label for="support-type">Type of support needed</label>
                     <select id="support-type" name="support-type" required>
                       <option value="" selected disabled>Select support type</option>
+                      <option value="Support Coordination">Support Coordination</option>
+                      <option value="Plan Management">Plan Management</option>
+                      <option value="Daily Living Supports">Daily Living Supports</option>
+                      <option value="Community Access">Community Access</option>
+                      <option value="Personal Care">Personal Care</option>
+                      <option value="Capacity Building">Capacity Building</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
                   <div class="field full">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell us a little about the support you are looking for and the best way to contact you."></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us a little about the support you are looking for and the best way to contact you."></textarea>
                   </div>
                 </div>
                 <div class="form-actions">
-                  <button class="btn btn-primary" type="submit" data-contact-submit></button>
-                  <a class="btn btn-secondary" href="tel:" data-contact-phone></a>
+                  <button class="btn btn-primary" type="submit">Send enquiry</button>
+                  <a class="btn btn-secondary" href="tel:0400555123">Call 0400 555 123</a>
                 </div>
               </form>
             </div>
 
-            <aside class="contact-side" data-reveal="card" style="--reveal-delay: 120ms;">
-              <div class="image-card contact-visual">
-                <img src="assets/ndis-template/photos/hero-photo.webp" alt="A calm one-on-one support conversation in a welcoming room." width="1600" height="1100" loading="lazy" />
+            <aside class="contact-side">
+              <div class="media-frame contact-media" data-reveal="image">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/ndis-template/photos/hero-photo-640.webp 640w,
+                      assets/ndis-template/photos/hero-photo-960.webp 960w,
+                      assets/ndis-template/photos/hero-photo.webp 1600w"
+                    sizes="(max-width: 940px) 100vw, 44vw" />
+                  <img src="assets/ndis-template/photos/hero-photo.webp" alt="A calm one-on-one support conversation in a welcoming room." width="1600" height="1100" loading="lazy" decoding="async" />
+                </picture>
               </div>
-              <div class="contact-grid" id="contactDetails"></div>
-              <div class="template-note" data-template-note></div>
+
+              <div class="contact-reassure" data-reveal="card" style="--reveal-delay: 110ms;">
+                <p>We’ll explain the next steps clearly.</p>
+                <p>A quick call is often the easiest place to start.</p>
+                <p>If we are not the right fit, we will say so and point you in a better direction.</p>
+              </div>
+
+              <div class="contact-grid" data-reveal="card" style="--reveal-delay: 140ms;">
+                <article class="contact-detail">
+                  <h3>Call or text</h3>
+                  <p>0400 555 123</p>
+                  <a href="tel:0400555123">Call now</a>
+                  <small>Monday to Friday, 8:30am to 5:00pm</small>
+                </article>
+                <article class="contact-detail">
+                  <h3>Email</h3>
+                  <p>hello@harbourlanesupport.com.au</p>
+                  <a href="mailto:hello@harbourlanesupport.com.au">Send email</a>
+                  <small>Useful for referrals and service questions</small>
+                </article>
+                <article class="contact-detail">
+                  <h3>Service area</h3>
+                  <p>Northern Rivers including Ballina, Lismore, Byron Bay and nearby communities.</p>
+                  <a href="#top">See service area</a>
+                  <small>Ask if you are just outside our usual area</small>
+                </article>
+                <article class="contact-detail">
+                  <h3>Funding and paperwork</h3>
+                  <p>Registered NDIS provider. Self-managed, plan-managed and NDIA-managed participants accepted.</p>
+                  <a href="service-agreement.html">View service agreement</a>
+                  <small>Privacy and complaints links are in the footer below</small>
+                </article>
+              </div>
             </aside>
           </div>
         </div>
@@ -1649,25 +1917,60 @@
       <div class="container">
         <div class="footer-card">
           <div class="footer-grid">
-            <div class="footer-brand">
+            <div>
               <div class="brand">
                 <span class="brand-mark" aria-hidden="true"></span>
                 <span class="brand-copy">
-                  <span class="brand-name" data-brand-name></span>
-                  <span class="brand-tag" data-footer-tag></span>
+                  <span class="brand-name">Harbour Lane Support</span>
+                  <span class="brand-tag">Professional NDIS support across the Northern Rivers</span>
                 </span>
               </div>
-              <p data-footer-copy></p>
+              <p class="footer-copy" style="margin-top: 14px;">Harbour Lane Support provides practical, participant-friendly NDIS support with clear communication, straightforward next steps and a calm first experience for families and coordinators.</p>
             </div>
-            <div>
-              <div class="footer-links" id="footerLinks"></div>
-              <div class="footer-social" id="footerSocial" style="margin-top:12px;"></div>
+
+            <div class="footer-nav">
+              <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
+                <a href="privacy-policy.html">Privacy policy</a>
+                <a href="feedback-and-complaints.html">Feedback &amp; complaints</a>
+                <a href="service-agreement.html">Service agreement</a>
+              </div>
+              <div class="footer-social" aria-label="Social and contact links">
+                <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M13.5 20v-6.2h2.3l.4-2.8h-2.7V9.2c0-.8.3-1.5 1.6-1.5h1.3V5.3c-.2 0-.9-.3-2.2-.3-2.4 0-4 1.4-4 4v2h-2.2v2.8h2.2V20h3.3Z" fill="currentColor"></path>
+                  </svg>
+                </a>
+                <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="4.5" y="4.5" width="15" height="15" rx="4.5" stroke="currentColor" stroke-width="1.8"></rect>
+                    <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"></circle>
+                    <circle cx="17" cy="7.2" r="1" fill="currentColor"></circle>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="5" y="9.5" width="3" height="9.5" fill="currentColor"></rect>
+                    <rect x="5" y="5" width="3" height="3" rx="1.5" fill="currentColor"></rect>
+                    <path d="M11 19v-5.2c0-2.1 1.2-3.3 3-3.3s3 1.2 3 3.7V19h-3v-4.5c0-1-.4-1.7-1.4-1.7s-1.6.7-1.6 1.8V19h-3Z" fill="currentColor"></path>
+                  </svg>
+                </a>
+                <a href="mailto:hello@harbourlanesupport.com.au" aria-label="Email">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="4.5" y="6.5" width="15" height="11" rx="2.5" stroke="currentColor" stroke-width="1.8"></rect>
+                    <path d="m6.5 8.5 5.5 4.4 5.5-4.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
+
           <div class="footer-meta">
-            <p data-footer-contact></p>
-            <p data-footer-region></p>
-            <p data-footer-complaints></p>
+            <p>Email hello@harbourlanesupport.com.au | Phone 0400 555 123</p>
+            <p>Service area: Northern Rivers, NSW including Ballina, Lismore, Byron Bay and nearby communities.</p>
+            <p>Registered NDIS provider | Self-managed, plan-managed and NDIA-managed participants accepted | Feedback response target: within 5 business days.</p>
           </div>
         </div>
       </div>
@@ -1675,859 +1978,102 @@
   </div>
 
   <div class="sticky-cta" aria-label="Quick contact actions">
-    <a class="btn btn-primary" href="tel:" data-sticky-call></a>
-    <a class="btn btn-secondary" href="#contact" data-sticky-enquiry></a>
+    <a class="btn btn-primary" href="tel:0400555123">Call now</a>
+    <a class="btn btn-secondary" href="#contact">Send enquiry</a>
   </div>
 
-  <!-- Edit the JSON block below to reuse this template for a new client quickly. -->
-  <script id="site-config" type="application/json">
-    {
-      "businessName": "Harbour Lane Support",
-      "brandTag": "NDIS disability support in plain English",
-      "footerTag": "One-page NDIS website template",
-      "region": "Northern Rivers and surrounding communities",
-      "phoneDisplay": "0400 555 123",
-      "phoneHref": "0400555123",
-      "email": "hello@harbourlanesupport.com.au",
-      "headerCta": "Make an enquiry",
-      "hero": {
-        "eyebrow": "Warm, participant-friendly disability support",
-        "title": "Friendly NDIS support that feels clear from day one.",
-        "copy": "We help participants and families find practical support that fits everyday life, with calm communication and a team people feel comfortable talking to.",
-        "assurance": "Trusted by participants, carers and coordinators who want support explained in plain English.",
-        "caption": "Use a warm, natural hero image here that immediately feels safe, respectful and approachable.",
-        "chips": [
-          "Person-centred and respectful",
-          "Clear communication",
-          "Flexible support around real life"
-        ]
-      },
-      "trustStrip": [
-        {
-          "label": "Servicing",
-          "value": "Northern Rivers"
-        },
-        {
-          "label": "Communication",
-          "value": "Clear and responsive"
-        },
-        {
-          "label": "Funding",
-          "value": "Update to suit accepted funding types"
-        },
-        {
-          "label": "Registration",
-          "value": "Replace with exact registration wording"
-        }
-      ],
-      "intro": {
-        "cards": [
-          {
-            "icon": "heart",
-            "title": "Person-centred support",
-            "copy": "Use language that centres dignity, choice and practical help rather than jargon-heavy promises."
-          },
-          {
-            "icon": "chat",
-            "title": "Clear communication",
-            "copy": "Make it easy for families and coordinators to understand services, funding fit and next steps."
-          },
-          {
-            "icon": "hands",
-            "title": "Reliable and caring team",
-            "copy": "Show warmth and professionalism without making the provider feel stiff, clinical or government-like."
-          }
-        ]
-      },
-      "services": {
-        "title": "Feature the services people ask about first",
-        "copy": "Keep the homepage focused on the most important support areas, then list secondary supports more simply.",
-        "secondaryCopy": "Also available:",
-        "secondaryItems": [
-          "Personal Care",
-          "Capacity Building",
-          "In-home support",
-          "Short-term support planning"
-        ],
-        "items": [
-          {
-            "icon": "coordination",
-            "title": "Support Coordination",
-            "copy": "Help people understand their plan, connect with providers and keep supports working well together."
-          },
-          {
-            "icon": "plan",
-            "title": "Plan Management",
-            "copy": "Simple invoicing, budget tracking and clear updates so participants and families know where things stand."
-          },
-          {
-            "icon": "daily",
-            "title": "Daily Living Supports",
-            "copy": "Practical support at home with routines, confidence and the everyday tasks that matter most."
-          },
-          {
-            "icon": "community",
-            "title": "Community Access",
-            "copy": "Support to get out, stay connected and take part in work, appointments, activities and local life."
-          }
-        ]
-      },
-      "about": {
-        "title": "A provider story that feels human, not scripted",
-        "copy": "Use this section to explain who the provider is, what matters to the team and how support is delivered in everyday life.",
-        "cta": "Talk with our team",
-        "values": [
-          "We start with listening and take time to understand the person's goals, routines and preferences.",
-          "Support plans are built around everyday life, not around a rigid service model.",
-          "Participants, carers and coordinators know who they are speaking with and what to expect next."
-        ]
-      },
-      "process": {
-        "title": "A calm, simple way to get started",
-        "copy": "Keep this section tight and reassuring so the path from first enquiry to support feels easy to follow.",
-        "steps": [
-          {
-            "title": "Start with a conversation",
-            "copy": "We learn about the person, their goals and what kind of support would make day-to-day life easier."
-          },
-          {
-            "title": "Plan the right support",
-            "copy": "We talk through funding, preferences, timing and the supports that will be the best fit."
-          },
-          {
-            "title": "Deliver support with care",
-            "copy": "The focus stays on consistency, communication and support that can adapt as needs change."
-          }
-        ]
-      },
-      "whyChoose": {
-        "title": "Built to reassure families, carers and support coordinators",
-        "copy": "This section gives the provider room to speak about reliability, safety, flexibility and the way they show up for people over time.",
-        "items": [
-          {
-            "icon": "shield",
-            "title": "Reliable support",
-            "copy": "People know when support is happening, who is coming and how to reach the team if plans change."
-          },
-          {
-            "icon": "voice",
-            "title": "Respect and choice",
-            "copy": "Support is shaped around the participant's preferences, pace and right to make decisions."
-          },
-          {
-            "icon": "message",
-            "title": "Clear communication",
-            "copy": "Families and coordinators get straightforward updates without being buried in paperwork or jargon."
-          },
-          {
-            "icon": "sun",
-            "title": "Flexible approach",
-            "copy": "Services can adapt as goals, routines and support needs change over time."
-          }
-        ]
-      },
-      "testimonials": {
-        "title": "Optional social proof",
-        "copy": "Only show testimonials when a client has genuine feedback ready to publish.",
-        "items": []
-      },
-      "faq": {
-        "title": "Frequently asked questions",
-        "copy": "Keep the answers short, practical and written in everyday language. This section is especially helpful for first-time families and self-managed participants.",
-        "items": [
-          {
-            "question": "Who do you support?",
-            "answer": "Update this answer to describe the provider's participant profile clearly. For example, adults, children, psychosocial disability, community access or support coordination."
-          },
-          {
-            "question": "Do you work with self-managed and plan-managed participants?",
-            "answer": "Use exact wording here that matches the provider's accepted funding types. If they also work with NDIA-managed participants, say that clearly and only if it is accurate."
-          },
-          {
-            "question": "How do I get started?",
-            "answer": "A common answer is to invite people to call, email or use the enquiry form so the team can talk through support needs, funding and location."
-          },
-          {
-            "question": "Do you offer service agreements?",
-            "answer": "Explain whether the provider uses service agreements, how they are shared and who can ask questions before anything starts."
-          },
-          {
-            "question": "How do I make a complaint or provide feedback?",
-            "answer": "State the correct feedback and complaints pathway here, including phone, email and any policy or external escalation process that applies."
-          }
-        ]
-      },
-      "contact": {
-        "title": "Let's start with a simple conversation",
-        "copy": "Use the form for details, or call if talking is easier. Keep the close-out calm, encouraging and practical.",
-        "submit": "Send enquiry",
-        "phoneCta": "Call now"
-      },
-      "contactDetails": [
-        {
-          "title": "Call or text",
-          "body": "0400 555 123",
-          "linkLabel": "Call 0400 555 123",
-          "href": "tel:0400555123"
-        },
-        {
-          "title": "Email",
-          "body": "hello@harbourlanesupport.com.au",
-          "linkLabel": "Email hello@harbourlanesupport.com.au",
-          "href": "mailto:hello@harbourlanesupport.com.au"
-        },
-        {
-          "title": "Service area",
-          "body": "Northern Rivers and surrounding communities",
-          "linkLabel": "Update area wording",
-          "href": "#top"
-        },
-        {
-          "title": "Accepted funding types",
-          "body": "Edit to match self-managed, plan-managed and NDIA-managed settings.",
-          "linkLabel": "Update funding wording",
-          "href": "#top"
-        }
-      ],
-      "templateNote": "Before publishing for a real provider, update registration wording, accepted funding types, complaints information, policy links, and any claims about services or locations so they are accurate.",
-      "supportOptions": [
-        "Support Coordination",
-        "Plan Management",
-        "Daily Living Supports",
-        "Community Access",
-        "Personal Care",
-        "Capacity Building",
-        "Other"
-      ],
-      "footer": {
-        "copy": "A one-page template for NDIS providers that need to feel warm, trustworthy and easy to understand on both desktop and mobile.",
-        "links": [
-          {
-            "label": "Services",
-            "href": "#services"
-          },
-          {
-            "label": "About",
-            "href": "#about"
-          },
-          {
-            "label": "FAQ",
-            "href": "#faq"
-          },
-          {
-            "label": "Privacy Policy",
-            "href": "#contact"
-          },
-          {
-            "label": "Feedback & Complaints",
-            "href": "#contact"
-          },
-          {
-            "label": "Service Agreement",
-            "href": "#contact"
-          }
-        ],
-        "social": [
-          {
-            "icon": "facebook",
-            "label": "Facebook",
-            "href": "https://facebook.com/"
-          },
-          {
-            "icon": "instagram",
-            "label": "Instagram",
-            "href": "https://instagram.com/"
-          },
-          {
-            "icon": "linkedin",
-            "label": "LinkedIn",
-            "href": "https://linkedin.com/"
-          },
-          {
-            "icon": "youtube",
-            "label": "YouTube",
-            "href": "https://youtube.com/"
-          }
-        ],
-        "contact": "Email hello@harbourlanesupport.com.au | Phone 0400 555 123",
-        "region": "Service area: Northern Rivers and surrounding communities",
-        "complaints": "Feedback and complaints pathway: replace with the provider's correct process before launch."
-      }
-    }
-  </script>
-
   <script>
-    const iconMap = {
-      heart: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 20.5s-7-4.35-7-10.1C5 7.36 7.06 5.5 9.55 5.5c1.49 0 2.92.76 3.45 1.94.53-1.18 1.96-1.94 3.45-1.94C18.94 5.5 21 7.36 21 10.4c0 5.75-7 10.1-7 10.1H12Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      `,
-      chat: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6 7.5h12a2.5 2.5 0 0 1 2.5 2.5v4A2.5 2.5 0 0 1 18 16.5H11l-4.5 3v-3H6A2.5 2.5 0 0 1 3.5 14v-4A2.5 2.5 0 0 1 6 7.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M8 11.5h8M8 14.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      hands: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M7 13.5 5.4 12a2 2 0 0 1 0-2.83l1.06-1.06a2 2 0 0 1 2.83 0L12 10.82l2.71-2.71a2 2 0 0 1 2.83 0L18.6 9.17a2 2 0 0 1 0 2.83L17 13.5l-5 5-5-5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-        </svg>
-      `,
-      coordination: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="6.5" cy="7" r="2.5" stroke="currentColor" stroke-width="1.8"/>
-          <circle cx="17.5" cy="7" r="2.5" stroke="currentColor" stroke-width="1.8"/>
-          <circle cx="12" cy="17" r="2.5" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M8.8 8.3 10.8 14M15.2 8.3 13.2 14M9 7h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      plan: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="5" y="4.5" width="14" height="15" rx="2.5" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M8.5 9h7M8.5 12.5h7M8.5 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      daily: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5 12.5 9.2 8l3.1 3 6.7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M6 19.5h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      community: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="8" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/>
-          <circle cx="16" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M4.5 17c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5M10.5 17c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      care: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 20.5s-6-4.1-6-9.1c0-2.56 1.73-4.4 4.04-4.4 1.31 0 2.51.68 2.96 1.73.45-1.05 1.65-1.73 2.96-1.73C18.27 7 20 8.84 20 11.4c0 5-6 9.1-6 9.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M9.5 12h5M12 9.5v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      growth: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6 17.5 10 13.5l3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M18 13V7h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      `,
-      shield: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 20.5s6-2.91 6-8.66V6.78L12 4.5 6 6.78v5.06c0 5.75 6 8.66 6 8.66Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="m9.5 12.5 1.7 1.7 3.6-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      `,
-      voice: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 15.5A3.5 3.5 0 0 0 15.5 12V8A3.5 3.5 0 1 0 8.5 8v4A3.5 3.5 0 0 0 12 15.5Z" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M6.5 12a5.5 5.5 0 1 0 11 0M12 18v2.5M9 20.5h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      message: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6 7.5h12a2.5 2.5 0 0 1 2.5 2.5v4A2.5 2.5 0 0 1 18 16.5H9.8L5.5 19v-2.5H6A2.5 2.5 0 0 1 3.5 14v-4A2.5 2.5 0 0 1 6 7.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-        </svg>
-      `,
-      sun: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M12 4.5v2.2M12 17.3v2.2M4.5 12h2.2M17.3 12h2.2M6.8 6.8l1.6 1.6M15.6 15.6l1.6 1.6M17.2 6.8l-1.6 1.6M8.4 15.6l-1.6 1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      brochure: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6.5 5.5h8a3 3 0 0 1 3 3v10h-8a3 3 0 0 0-3 3v-16Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M9.5 9.5h5M9.5 13h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      policy: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M7 4.5h7l4 4v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-12a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M14 4.5V9h4M8.5 13h7M8.5 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      feedback: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5.5 7.5A2.5 2.5 0 0 1 8 5h8a2.5 2.5 0 0 1 2.5 2.5v5A2.5 2.5 0 0 1 16 15H11l-4.5 3v-3H8A2.5 2.5 0 0 1 5.5 12.5v-5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M9 10.5h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      `,
-      facebook: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M13.5 20v-6.2h2.3l.4-2.8h-2.7V9.2c0-.8.3-1.5 1.6-1.5h1.3V5.3c-.2 0-.9-.3-2.2-.3-2.4 0-4 1.4-4 4v2h-2.2v2.8h2.2V20h3.3Z" fill="currentColor"/>
-        </svg>
-      `,
-      instagram: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="4.5" y="4.5" width="15" height="15" rx="4.5" stroke="currentColor" stroke-width="1.8"/>
-          <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"/>
-          <circle cx="17" cy="7.2" r="1" fill="currentColor"/>
-        </svg>
-      `,
-      linkedin: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="5" y="9.5" width="3" height="9.5" fill="currentColor"/>
-          <rect x="5" y="5" width="3" height="3" rx="1.5" fill="currentColor"/>
-          <path d="M11 19v-5.2c0-2.1 1.2-3.3 3-3.3s3 1.2 3 3.7V19h-3v-4.5c0-1-.4-1.7-1.4-1.7s-1.6.7-1.6 1.8V19h-3Z" fill="currentColor"/>
-        </svg>
-      `,
-      youtube: `
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M20.5 8.2a2.8 2.8 0 0 0-2-2c-1.8-.5-6.5-.5-6.5-.5s-4.7 0-6.5.5a2.8 2.8 0 0 0-2 2c-.5 1.8-.5 3.8-.5 3.8s0 2 .5 3.8a2.8 2.8 0 0 0 2 2c1.8.5 6.5.5 6.5.5s4.7 0 6.5-.5a2.8 2.8 0 0 0 2-2c.5-1.8.5-3.8.5-3.8s0-2-.5-3.8Z" stroke="currentColor" stroke-width="1.5"/>
-          <path d="m10 15.2 5-3.2-5-3.2v6.4Z" fill="currentColor"/>
-        </svg>
-      `
-    };
     (() => {
-      const asObject = (value) => value && typeof value === "object" && !Array.isArray(value) ? value : {};
-      const asArray = (value, fallback = []) => Array.isArray(value) ? value : fallback;
-      const textOr = (value, fallback) => typeof value === "string" && value.trim() ? value.trim() : fallback;
-
-      let rawConfig = {};
-      try {
-        rawConfig = JSON.parse(document.getElementById("site-config")?.textContent || "{}");
-      } catch (error) {
-        console.error("NDIS template config could not be parsed. Falling back to defaults.", error);
-      }
-
-      const root = asObject(rawConfig);
-      const hero = {
-        eyebrow: "Warm, participant-friendly disability support",
-        title: "Friendly NDIS support that feels clear from day one.",
-        copy: "We help participants and families find practical support that fits everyday life, with calm communication and a team people feel comfortable talking to.",
-        assurance: "Trusted by participants, carers and coordinators who want support explained in plain English.",
-        caption: "Use a warm, natural hero image here that immediately feels safe, respectful and approachable.",
-        chips: ["Person-centred and respectful", "Clear communication", "Flexible support around real life"],
-        ...asObject(root.hero)
-      };
-      const intro = {
-        cards: [
-          { icon: "heart", title: "Person-centred support", copy: "Use language that centres dignity, choice and practical help rather than jargon-heavy promises." },
-          { icon: "chat", title: "Clear communication", copy: "Make it easy for families and coordinators to understand services, funding fit and next steps." },
-          { icon: "hands", title: "Reliable and caring team", copy: "Show warmth and professionalism without making the provider feel stiff, clinical or government-like." }
-        ],
-        ...asObject(root.intro)
-      };
-      const services = {
-        title: "Feature the services people ask about first",
-        copy: "Keep the homepage focused on the most important support areas, then list secondary supports more simply.",
-        secondaryCopy: "Also available:",
-        secondaryItems: ["Personal Care", "Capacity Building"],
-        items: [
-          { icon: "coordination", title: "Support Coordination", copy: "Help people understand their plan, connect with providers and keep supports working well together." },
-          { icon: "plan", title: "Plan Management", copy: "Simple invoicing, budget tracking and clear updates so participants and families know where things stand." },
-          { icon: "daily", title: "Daily Living Supports", copy: "Practical support at home with routines, confidence and the everyday tasks that matter most." },
-          { icon: "community", title: "Community Access", copy: "Support to get out, stay connected and take part in work, appointments, activities and local life." }
-        ],
-        ...asObject(root.services)
-      };
-      const about = {
-        title: "A provider story that feels human, not scripted",
-        copy: "Use this section to explain who the provider is, what matters to the team and how support is delivered in everyday life.",
-        cta: "Talk with our team",
-        values: [
-          "We start with listening and take time to understand the person's goals, routines and preferences.",
-          "Support plans are built around everyday life, not around a rigid service model.",
-          "Participants, carers and coordinators know who they are speaking with and what to expect next."
-        ],
-        ...asObject(root.about)
-      };
-      const process = {
-        title: "A calm, simple way to get started",
-        copy: "Keep this section tight and reassuring so the path from first enquiry to support feels easy to follow.",
-        steps: [
-          { title: "Start with a conversation", copy: "We learn about the person, their goals and what kind of support would make day-to-day life easier." },
-          { title: "Plan the right support", copy: "We talk through funding, preferences, timing and the supports that will be the best fit." },
-          { title: "Deliver support with care", copy: "The focus stays on consistency, communication and support that can adapt as needs change." }
-        ],
-        ...asObject(root.process)
-      };
-      const whyChoose = {
-        title: "Built to reassure families, carers and support coordinators",
-        copy: "This section gives the provider room to speak about reliability, safety, flexibility and the way they show up for people over time.",
-        items: [
-          { icon: "shield", title: "Reliable support", copy: "People know when support is happening, who is coming and how to reach the team if plans change." },
-          { icon: "voice", title: "Respect and choice", copy: "Support is shaped around the participant's preferences, pace and right to make decisions." },
-          { icon: "message", title: "Clear communication", copy: "Families and coordinators get straightforward updates without being buried in paperwork or jargon." },
-          { icon: "sun", title: "Flexible approach", copy: "Services can adapt as goals, routines and support needs change over time." }
-        ],
-        ...asObject(root.whyChoose)
-      };
-      const testimonials = {
-        title: "Optional social proof",
-        copy: "Only show testimonials when a client has genuine feedback ready to publish.",
-        items: [],
-        ...asObject(root.testimonials)
-      };
-      const faq = {
-        title: "Frequently asked questions",
-        copy: "Keep the answers short, practical and written in everyday language.",
-        items: [
-          { question: "Who do you support?", answer: "Update this answer to describe the provider's participant profile clearly." },
-          { question: "Do you work with self-managed and plan-managed participants?", answer: "Use exact wording here that matches the provider's accepted funding types." },
-          { question: "How do I get started?", answer: "Invite people to call, email or use the enquiry form so the team can talk through support needs, funding and location." },
-          { question: "How do I make a complaint or provide feedback?", answer: "State the correct feedback and complaints pathway here, including phone, email and any policy or escalation process that applies." }
-        ],
-        ...asObject(root.faq)
-      };
-      const contact = {
-        title: "Let's start with a simple conversation",
-        copy: "Use the form for details, or call if talking is easier. Keep the close-out calm, encouraging and practical.",
-        submit: "Send enquiry",
-        phoneCta: "Call now",
-        ...asObject(root.contact)
-      };
-      const footer = {
-        copy: "A one-page template for NDIS providers that need to feel warm, trustworthy and easy to understand on both desktop and mobile.",
-        links: [
-          { label: "Services", href: "#services" },
-          { label: "About", href: "#about" },
-          { label: "FAQ", href: "#faq" },
-          { label: "Privacy Policy", href: "#contact" },
-          { label: "Feedback & Complaints", href: "#contact" },
-          { label: "Service Agreement", href: "#contact" }
-        ],
-        social: [
-          { icon: "facebook", label: "Facebook", href: "https://facebook.com/" },
-          { icon: "instagram", label: "Instagram", href: "https://instagram.com/" },
-          { icon: "linkedin", label: "LinkedIn", href: "https://linkedin.com/" },
-          { icon: "youtube", label: "YouTube", href: "https://youtube.com/" }
-        ],
-        contact: "Email hello@harbourlanesupport.com.au | Phone 0400 555 123",
-        region: "Service area: Northern Rivers and surrounding communities",
-        complaints: "Feedback and complaints pathway: replace with the provider's correct process before launch.",
-        ...asObject(root.footer)
-      };
-
-      const config = {
-        businessName: textOr(root.businessName, "Harbour Lane Support"),
-        brandTag: textOr(root.brandTag, "NDIS disability support in plain English"),
-        footerTag: textOr(root.footerTag, "One-page NDIS website template"),
-        region: textOr(root.region, "Northern Rivers and surrounding communities"),
-        phoneDisplay: textOr(root.phoneDisplay, "0400 555 123"),
-        phoneHref: textOr(root.phoneHref, "0400555123"),
-        email: textOr(root.email, "hello@harbourlanesupport.com.au"),
-        headerCta: textOr(root.headerCta, "Make an enquiry"),
-        templateNote: textOr(root.templateNote, "Before publishing for a real provider, update registration wording, accepted funding types, complaints information, policy links, and any claims about services or locations so they are accurate."),
-        supportOptions: asArray(root.supportOptions, ["Support Coordination", "Plan Management", "Daily Living Supports", "Community Access", "Other"]),
-        trustStrip: asArray(root.trustStrip, [
-          { label: "Servicing", value: "Northern Rivers" },
-          { label: "Communication", value: "Clear and responsive" },
-          { label: "Funding", value: "Update to suit accepted funding types" },
-          { label: "Registration", value: "Replace with exact registration wording" }
-        ]),
-        contactDetails: asArray(root.contactDetails, [
-          { title: "Call or text", body: "0400 555 123", linkLabel: "Call 0400 555 123", href: "tel:0400555123" },
-          { title: "Email", body: "hello@harbourlanesupport.com.au", linkLabel: "Email hello@harbourlanesupport.com.au", href: "mailto:hello@harbourlanesupport.com.au" },
-          { title: "Service area", body: "Northern Rivers and surrounding communities", linkLabel: "Update area wording", href: "#top" }
-        ]),
-        hero: { ...hero, chips: asArray(hero.chips, ["Person-centred and respectful", "Clear communication", "Flexible support around real life"]) },
-        intro: { ...intro, cards: asArray(intro.cards, []) },
-        services: { ...services, items: asArray(services.items, []).slice(0, 4), secondaryItems: asArray(services.secondaryItems, []) },
-        about: { ...about, values: asArray(about.values, []) },
-        process: { ...process, steps: asArray(process.steps, []).slice(0, 3) },
-        whyChoose: { ...whyChoose, items: asArray(whyChoose.items, []) },
-        testimonials: { ...testimonials, items: asArray(testimonials.items, []) },
-        faq: { ...faq, items: asArray(faq.items, []) },
-        contact,
-        footer: {
-          ...footer,
-          links: asArray(footer.links, []),
-          social: asArray(footer.social, [])
+      const runSafely = (label, fn) => {
+        try {
+          fn();
+        } catch (error) {
+          console.error(`NDIS template ${label} failed.`, error);
         }
       };
 
-      const setText = (selector, value) => {
-        document.querySelectorAll(selector).forEach((node) => {
-          node.textContent = textOr(value, "");
-        });
-      };
+      runSafely("mobile navigation", () => {
+        const toggle = document.querySelector(".menu-toggle");
+        const panel = document.getElementById("mobileMenu");
+        if (!toggle || !panel) return;
 
-      try {
-        setText("[data-brand-name]", config.businessName);
-        setText("[data-brand-tag]", config.brandTag);
-        setText("[data-footer-tag]", config.footerTag);
-        setText("[data-header-cta]", config.headerCta);
-        setText("[data-mobile-cta]", config.headerCta);
-        setText("[data-primary-cta]", config.headerCta);
-        setText("[data-hero-eyebrow]", config.hero.eyebrow);
-        setText("[data-hero-title]", config.hero.title);
-        setText("[data-hero-copy]", config.hero.copy);
-        setText("[data-hero-assurance]", config.hero.assurance);
-        setText("[data-hero-caption]", config.hero.caption);
-        setText("[data-services-title]", config.services.title);
-        setText("[data-services-copy]", config.services.copy);
-        setText("[data-services-secondary-copy]", config.services.secondaryCopy);
-        setText("[data-about-title]", config.about.title);
-        setText("[data-about-copy]", config.about.copy);
-        setText("[data-about-cta]", config.about.cta);
-        setText("[data-process-title]", config.process.title);
-        setText("[data-process-copy]", config.process.copy);
-        setText("[data-why-title]", config.whyChoose.title);
-        setText("[data-why-copy]", config.whyChoose.copy);
-        setText("[data-testimonials-title]", config.testimonials.title);
-        setText("[data-testimonials-copy]", config.testimonials.copy);
-        setText("[data-faq-title]", config.faq.title);
-        setText("[data-faq-copy]", config.faq.copy);
-        setText("[data-contact-title]", config.contact.title);
-        setText("[data-contact-copy]", config.contact.copy);
-        setText("[data-contact-submit]", config.contact.submit);
-        setText("[data-contact-phone]", config.contact.phoneCta);
-        setText("[data-template-note]", config.templateNote);
-        setText("[data-footer-copy]", config.footer.copy);
-        setText("[data-footer-contact]", config.footer.contact);
-        setText("[data-footer-region]", config.footer.region);
-        setText("[data-footer-complaints]", config.footer.complaints);
-        setText("[data-sticky-call]", "Call now");
-        setText("[data-sticky-enquiry]", config.headerCta);
+        panel.hidden = false;
 
-        const telephoneLinks = [
-          ...document.querySelectorAll("[data-phone-cta]"),
-          ...document.querySelectorAll("[data-contact-phone]"),
-          ...document.querySelectorAll("[data-sticky-call]")
-        ];
+        const closeMenu = () => {
+          toggle.setAttribute("aria-expanded", "false");
+          panel.classList.remove("is-open");
+        };
 
-        telephoneLinks.forEach((link) => {
-          link.setAttribute("href", `tel:${config.phoneHref}`);
-          if (!link.textContent.trim()) link.textContent = config.phoneDisplay;
+        toggle.addEventListener("click", () => {
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", String(!expanded));
+          panel.classList.toggle("is-open", !expanded);
         });
 
-        const headerPhoneButton = document.querySelector("[data-phone-cta]");
-        if (headerPhoneButton) headerPhoneButton.textContent = `Call ${config.phoneDisplay}`;
-
-        const heroChips = document.getElementById("heroChips");
-        config.hero.chips.forEach((chip) => {
-          const span = document.createElement("span");
-          span.className = "hero-chip";
-          span.textContent = chip;
-          heroChips.appendChild(span);
+        panel.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
         });
 
-        const trustStrip = document.getElementById("trustStrip");
-        config.trustStrip.forEach((item) => {
-          const article = document.createElement("article");
-          article.className = "trust-strip-item";
-          article.innerHTML = `<strong>${textOr(item.label, "")}</strong><span>${textOr(item.value, "")}</span>`;
-          trustStrip.appendChild(article);
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 940) closeMenu();
         });
 
-        const introCards = document.getElementById("introCards");
-        config.intro.cards.forEach((card, index) => {
-          const article = document.createElement("article");
-          article.className = "trust-mini-card";
-          article.setAttribute("data-reveal", "card");
-          article.style.setProperty("--reveal-delay", `${index * 90}ms`);
-          article.innerHTML = `
-            <div class="intro-icon">${iconMap[card.icon] || iconMap.heart}</div>
-            <h3>${textOr(card.title, "")}</h3>
-            <p>${textOr(card.copy, "")}</p>
-          `;
-          introCards.appendChild(article);
-        });
+        closeMenu();
+      });
 
-        const servicesGrid = document.getElementById("servicesGrid");
-        config.services.items.forEach((service, index) => {
-          const article = document.createElement("article");
-          article.className = `service-card${index === 0 ? " is-highlight" : ""}`;
-          article.setAttribute("data-reveal", index === 0 ? "image" : "card");
-          article.style.setProperty("--reveal-delay", `${index * 70}ms`);
-          article.innerHTML = `
-            <div class="service-icon">${iconMap[service.icon] || iconMap.coordination}</div>
-            <h3>${textOr(service.title, "")}</h3>
-            <p>${textOr(service.copy, "")}</p>
-          `;
-          servicesGrid.appendChild(article);
-        });
+      runSafely("sticky CTA visibility", () => {
+        const sticky = document.querySelector(".sticky-cta");
+        const contact = document.getElementById("contact");
+        if (!sticky || !contact || !("IntersectionObserver" in window)) return;
 
-        const secondaryServices = document.getElementById("secondaryServices");
-        config.services.secondaryItems.forEach((item) => {
-          const span = document.createElement("span");
-          span.className = "secondary-service";
-          span.textContent = textOr(item, "");
-          secondaryServices.appendChild(span);
-        });
-
-        const valueList = document.getElementById("valueList");
-        config.about.values.forEach((item) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<span class="list-mark">+</span><span>${textOr(item, "")}</span>`;
-          valueList.appendChild(li);
-        });
-
-        const stepsGrid = document.getElementById("stepsGrid");
-        config.process.steps.forEach((step, index) => {
-          const article = document.createElement("article");
-          article.className = "step-card";
-          article.setAttribute("data-reveal", "card");
-          article.style.setProperty("--reveal-delay", `${index * 90}ms`);
-          article.innerHTML = `
-            <div class="step-number">${String(index + 1).padStart(2, "0")}</div>
-            <h3>${textOr(step.title, "")}</h3>
-            <p>${textOr(step.copy, "")}</p>
-          `;
-          stepsGrid.appendChild(article);
-        });
-
-        const whyPoints = document.getElementById("whyPoints");
-        config.whyChoose.items.forEach((item, index) => {
-          const div = document.createElement("div");
-          div.className = "why-item";
-          div.setAttribute("data-reveal", "card");
-          div.style.setProperty("--reveal-delay", `${index * 80}ms`);
-          div.innerHTML = `
-            <div class="why-item-icon">${iconMap[item.icon] || iconMap.shield}</div>
-            <div>
-              <strong>${textOr(item.title, "")}</strong>
-              <p>${textOr(item.copy, "")}</p>
-            </div>
-          `;
-          whyPoints.appendChild(div);
-        });
-
-        const testimonialsSection = document.getElementById("testimonialsSection");
-        const testimonialsGrid = document.getElementById("testimonialsGrid");
-        if (!config.testimonials.items.length) {
-          testimonialsSection.hidden = true;
-        } else {
-          config.testimonials.items.forEach((item, index) => {
-            const article = document.createElement("article");
-            article.className = "testimonial-card";
-            article.setAttribute("data-reveal", "card");
-            article.style.setProperty("--reveal-delay", `${index * 90}ms`);
-            article.innerHTML = `
-              <h3>“</h3>
-              <p class="testimonial-quote">${textOr(item.quote, "")}</p>
-              <div class="testimonial-meta">
-                <span class="testimonial-name">${textOr(item.name, "")}</span>
-                <span class="testimonial-role">${textOr(item.role, "")}</span>
-              </div>
-            `;
-            testimonialsGrid.appendChild(article);
+        const stickyObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            sticky.classList.toggle("is-hidden", entry.isIntersecting);
           });
+        }, {
+          threshold: 0.2
+        });
+
+        stickyObserver.observe(contact);
+      });
+
+      runSafely("scroll reveal", () => {
+        const nodes = [...document.querySelectorAll("[data-reveal]")];
+        if (!nodes.length) return;
+
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+          nodes.forEach((node) => node.classList.add("is-visible"));
+          return;
         }
 
-        const faqList = document.getElementById("faqList");
-        config.faq.items.forEach((item, index) => {
-          const details = document.createElement("details");
-          details.className = "faq-item";
-          details.setAttribute("data-reveal", "card");
-          details.style.setProperty("--reveal-delay", `${index * 70}ms`);
-          details.innerHTML = `
-            <summary class="faq-question">
-              <span>${textOr(item.question, "")}</span>
-              <span class="faq-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>${textOr(item.answer, "")}</p>
-            </div>
-          `;
-          faqList.appendChild(details);
+        const visibleOnLoad = new Set();
+        nodes.forEach((node) => {
+          const rect = node.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.88) {
+            node.classList.add("is-visible");
+            visibleOnLoad.add(node);
+          }
         });
 
-        const supportTypeSelect = document.getElementById("support-type");
-        config.supportOptions.forEach((option) => {
-          const node = document.createElement("option");
-          node.value = option;
-          node.textContent = option;
-          supportTypeSelect.appendChild(node);
-        });
+        document.documentElement.classList.add("reveal-enhanced");
 
-        const contactDetails = document.getElementById("contactDetails");
-        config.contactDetails.forEach((item, index) => {
-          const article = document.createElement("article");
-          article.className = "contact-detail";
-          article.innerHTML = `
-            <h3>${textOr(item.title, "")}</h3>
-            <p>${textOr(item.body, "")}</p>
-            <a href="${textOr(item.href, "#contact")}">${textOr(item.linkLabel, "Learn more")}</a>
-          `;
-          contactDetails.appendChild(article);
-        });
-
-        const footerLinks = document.getElementById("footerLinks");
-        config.footer.links.forEach((item) => {
-          const anchor = document.createElement("a");
-          anchor.href = textOr(item.href, "#contact");
-          anchor.textContent = textOr(item.label, "");
-          footerLinks.appendChild(anchor);
-        });
-
-        const footerSocial = document.getElementById("footerSocial");
-        config.footer.social.forEach((item) => {
-          const anchor = document.createElement("a");
-          anchor.href = textOr(item.href, "#");
-          anchor.setAttribute("aria-label", textOr(item.label, "Social link"));
-          anchor.target = "_blank";
-          anchor.rel = "noopener noreferrer";
-          anchor.innerHTML = iconMap[item.icon] || iconMap.facebook;
-          footerSocial.appendChild(anchor);
-        });
-
-        const mobileToggle = document.querySelector(".menu-toggle");
-        const mobilePanel = document.getElementById("mobileMenu");
-
-        if (mobileToggle && mobilePanel) {
-          mobilePanel.hidden = false;
-
-          const closeMobileMenu = () => {
-            mobileToggle.setAttribute("aria-expanded", "false");
-            mobilePanel.classList.remove("is-open");
-          };
-
-          const toggleMobileMenu = () => {
-            const expanded = mobileToggle.getAttribute("aria-expanded") === "true";
-            mobileToggle.setAttribute("aria-expanded", String(!expanded));
-            mobilePanel.classList.toggle("is-open", !expanded);
-          };
-
-          closeMobileMenu();
-          mobileToggle.addEventListener("click", toggleMobileMenu);
-
-          mobilePanel.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", closeMobileMenu);
+        const observer = new IntersectionObserver((entries, revealObserver) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
           });
-
-          window.addEventListener("resize", () => {
-            if (window.innerWidth > 940) closeMobileMenu();
-          });
-        }
-
-        const revealNodes = document.querySelectorAll("[data-reveal]");
-        document.documentElement.classList.add("reveal-ready");
-        if ("IntersectionObserver" in window) {
-          const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            });
-          }, {
-            threshold: 0.18,
-            rootMargin: "0px 0px -8% 0px"
-          });
-
-          revealNodes.forEach((node) => revealObserver.observe(node));
-        } else {
-          revealNodes.forEach((node) => node.classList.add("is-visible"));
-        }
-
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", (event) => {
-            const targetId = anchor.getAttribute("href");
-            if (!targetId || targetId === "#") return;
-            const target = document.querySelector(targetId);
-            if (!target) return;
-            event.preventDefault();
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
+        }, {
+          threshold: 0.18,
+          rootMargin: "0px 0px -8% 0px"
         });
-      } catch (error) {
-        console.error("NDIS template initialisation failed.", error);
-        document.documentElement.classList.remove("reveal-ready");
-        document.querySelectorAll("[data-reveal]").forEach((node) => node.classList.add("is-visible"));
-      }
+
+        nodes.forEach((node) => {
+          if (visibleOnLoad.has(node)) return;
+          observer.observe(node);
+        });
+      });
     })();
   </script>
 </body>
