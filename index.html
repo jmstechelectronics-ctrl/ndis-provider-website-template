@@ -393,8 +393,7 @@
       padding: clamp(22px, 2.6vw, 32px);
       border-radius: 40px;
       overflow: clip;
-      display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 470px);
+      display: flex;
       align-items: center;
       isolation: isolate;
       border: 1px solid rgba(255, 255, 255, 0.66);
@@ -408,17 +407,24 @@
       inset: 0;
       z-index: 1;
       background:
-        linear-gradient(90deg, rgba(255, 249, 242, 0.02) 0%, rgba(255, 248, 241, 0.08) 44%, rgba(255, 248, 241, 0.58) 76%, rgba(255, 248, 241, 0.8) 100%),
+        linear-gradient(90deg, rgba(255, 249, 242, 0) 0%, rgba(255, 248, 241, 0.03) 44%, rgba(255, 248, 241, 0.26) 60%, rgba(255, 248, 241, 0.72) 82%, rgba(255, 248, 241, 0.88) 100%),
         linear-gradient(180deg, rgba(76, 54, 43, 0.06), rgba(255, 255, 255, 0.02));
       pointer-events: none;
     }
 
-    .hero-copy {
+    .hero-content {
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 470px;
-      justify-self: end;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-left: clamp(300px, 44%, 560px);
+    }
+
+    .hero-copy {
+      width: 100%;
+      max-width: 420px;
       display: grid;
       gap: 16px;
       align-content: center;
@@ -527,7 +533,7 @@
 
     .hero-visual img {
       object-fit: cover;
-      object-position: 26% 40%;
+      object-position: 18% 40%;
     }
 
     .about-media img {
@@ -1407,22 +1413,25 @@
 
       .hero-shell {
         min-height: 420px;
-        grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
         padding: 26px;
       }
 
+      .hero-content {
+        padding-left: clamp(240px, 38%, 420px);
+      }
+
       .hero-copy {
-        max-width: 460px;
+        max-width: 390px;
       }
 
       .hero-shell::before {
         background:
-          linear-gradient(120deg, rgba(255, 249, 242, 0.03) 0%, rgba(255, 248, 241, 0.12) 40%, rgba(255, 248, 241, 0.56) 76%, rgba(255, 248, 241, 0.82) 100%),
+          linear-gradient(120deg, rgba(255, 249, 242, 0.01) 0%, rgba(255, 248, 241, 0.06) 42%, rgba(255, 248, 241, 0.26) 58%, rgba(255, 248, 241, 0.7) 82%, rgba(255, 248, 241, 0.88) 100%),
           linear-gradient(180deg, rgba(67, 48, 40, 0.04), rgba(255, 255, 255, 0.02));
       }
 
       .hero-visual img {
-        object-position: 28% 40%;
+        object-position: 16% 40%;
       }
 
       .contact-media {
@@ -1452,16 +1461,18 @@
 
       .hero-shell {
         min-height: 440px;
-        grid-template-columns: 1fr;
         align-items: flex-end;
         padding-block: 22px;
+      }
+
+      .hero-content {
+        padding-left: 0;
       }
 
       .hero-copy {
         gap: 16px;
         width: 100%;
         max-width: none;
-        justify-self: stretch;
       }
 
       .hero-copy h1 {
@@ -1501,12 +1512,12 @@
 
       .hero-shell::before {
         background:
-          linear-gradient(180deg, rgba(255, 249, 242, 0.08) 0%, rgba(255, 248, 241, 0.24) 48%, rgba(255, 248, 241, 0.82) 100%),
+          linear-gradient(180deg, rgba(255, 249, 242, 0.06) 0%, rgba(255, 248, 241, 0.18) 46%, rgba(255, 248, 241, 0.78) 100%),
           linear-gradient(180deg, rgba(67, 48, 40, 0.04), rgba(255, 255, 255, 0.02));
       }
 
       .hero-visual img {
-        object-position: 22% 38%;
+        object-position: 18% 38%;
       }
 
       .reveal-enhanced [data-reveal="text"],
@@ -1600,20 +1611,22 @@
               </picture>
             </div>
 
-            <div class="hero-copy" data-reveal="text">
-              <p class="eyebrow">Registered NDIS provider in Northern Rivers</p>
-              <h1>NDIS support for adults and families across the Northern Rivers that feels clear from day one.</h1>
-              <p class="lede">Harbour Lane Support helps with Support Coordination, Plan Management, Daily Living Supports and Community Access across Ballina, Lismore, Byron Bay and nearby communities. We work with self-managed, plan-managed and NDIA-managed participants and explain each next step in plain English.</p>
-              <ul class="hero-proof-list">
-                <li><span class="proof-dot">01</span><span>For participants, families, carers and support coordinators who want practical support without the jargon.</span></li>
-                <li><span class="proof-dot">02</span><span>Exact registration status, funding fit and service area are clear before anyone is asked to commit.</span></li>
-                <li><span class="proof-dot">03</span><span>You can start with a short call, a callback request, or a simple enquiry form.</span></li>
-              </ul>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#contact">Check if we’re the right fit</a>
-                <a class="btn btn-ghost" href="tel:0400555123">Call 0400 555 123</a>
+            <div class="hero-content">
+              <div class="hero-copy" data-reveal="text">
+                <p class="eyebrow">Registered NDIS provider in Northern Rivers</p>
+                <h1>NDIS support for adults and families across the Northern Rivers that feels clear from day one.</h1>
+                <p class="lede">Harbour Lane Support helps with Support Coordination, Plan Management, Daily Living Supports and Community Access across Ballina, Lismore, Byron Bay and nearby communities. We work with self-managed, plan-managed and NDIA-managed participants and explain each next step in plain English.</p>
+                <ul class="hero-proof-list">
+                  <li><span class="proof-dot">01</span><span>For participants, families, carers and support coordinators who want practical support without the jargon.</span></li>
+                  <li><span class="proof-dot">02</span><span>Exact registration status, funding fit and service area are clear before anyone is asked to commit.</span></li>
+                  <li><span class="proof-dot">03</span><span>You can start with a short call, a callback request, or a simple enquiry form.</span></li>
+                </ul>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#contact">Check if we’re the right fit</a>
+                  <a class="btn btn-ghost" href="tel:0400555123">Call 0400 555 123</a>
+                </div>
+                <p class="hero-note">You don’t need to have everything worked out before you contact us.</p>
               </div>
-              <p class="hero-note">You don’t need to have everything worked out before you contact us.</p>
             </div>
           </div>
 
