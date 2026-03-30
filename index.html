@@ -389,8 +389,8 @@
 
     .hero-shell {
       position: relative;
-      min-height: clamp(410px, 36vw, 480px);
-      padding: clamp(22px, 2.6vw, 32px);
+      min-height: clamp(390px, 31vw, 430px);
+      padding: clamp(18px, 2.2vw, 28px);
       border-radius: 40px;
       overflow: clip;
       display: flex;
@@ -419,26 +419,29 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding-left: clamp(300px, 44%, 560px);
+      padding-left: clamp(560px, 58%, 680px);
+      padding-right: clamp(8px, 1.5vw, 18px);
     }
 
     .hero-copy {
       width: 100%;
-      max-width: 420px;
+      max-width: 340px;
       display: grid;
-      gap: 16px;
+      gap: 12px;
       align-content: center;
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.35rem, 4.3vw, 4rem);
-      max-width: 12ch;
-      line-height: 1.06;
+      font-size: clamp(2.2rem, 3.5vw, 3.3rem);
+      max-width: 10.5ch;
+      line-height: 1;
       text-wrap: balance;
     }
 
     .hero-copy .lede {
-      max-width: 43ch;
+      max-width: 36ch;
+      font-size: 0.96rem;
+      line-height: 1.48;
       color: rgba(36, 25, 21, 0.9);
     }
 
@@ -452,7 +455,7 @@
 
     .hero-proof-list {
       display: grid;
-      gap: 8px;
+      gap: 7px;
       padding: 0;
       margin: 0;
       list-style: none;
@@ -464,6 +467,8 @@
       gap: 12px;
       align-items: start;
       color: var(--ink-700);
+      font-size: 0.94rem;
+      line-height: 1.42;
     }
 
     .proof-dot {
@@ -485,13 +490,15 @@
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
     .hero-note {
       margin: 0;
       color: var(--teal-700);
       font-weight: 700;
+      font-size: 0.94rem;
+      line-height: 1.4;
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
     }
 
@@ -533,7 +540,7 @@
 
     .hero-visual img {
       object-fit: cover;
-      object-position: 18% 40%;
+      object-position: 12% 40%;
     }
 
     .about-media img {
@@ -1412,16 +1419,17 @@
       }
 
       .hero-shell {
-        min-height: 420px;
-        padding: 26px;
+        min-height: 400px;
+        padding: 22px;
       }
 
       .hero-content {
-        padding-left: clamp(240px, 38%, 420px);
+        padding-left: clamp(430px, 54%, 560px);
+        padding-right: 10px;
       }
 
       .hero-copy {
-        max-width: 390px;
+        max-width: 320px;
       }
 
       .hero-shell::before {
@@ -1431,7 +1439,7 @@
       }
 
       .hero-visual img {
-        object-position: 16% 40%;
+        object-position: 10% 40%;
       }
 
       .contact-media {
@@ -1460,27 +1468,30 @@
       }
 
       .hero-shell {
-        min-height: 440px;
+        min-height: 420px;
         align-items: flex-end;
-        padding-block: 22px;
+        padding-block: 20px;
       }
 
       .hero-content {
         padding-left: 0;
+        padding-right: 0;
       }
 
       .hero-copy {
-        gap: 16px;
+        gap: 12px;
         width: 100%;
         max-width: none;
       }
 
       .hero-copy h1 {
-        font-size: clamp(2.1rem, 10vw, 3.15rem);
+        font-size: clamp(2rem, 9vw, 2.9rem);
+        max-width: 11ch;
       }
 
       .hero-copy .lede {
         max-width: 100%;
+        font-size: 0.95rem;
       }
 
       .hero-proof-list {
@@ -1614,12 +1625,12 @@
             <div class="hero-content">
               <div class="hero-copy" data-reveal="text">
                 <p class="eyebrow">Registered NDIS provider in Northern Rivers</p>
-                <h1>NDIS support for adults and families across the Northern Rivers that feels clear from day one.</h1>
-                <p class="lede">Harbour Lane Support helps with Support Coordination, Plan Management, Daily Living Supports and Community Access across Ballina, Lismore, Byron Bay and nearby communities. We work with self-managed, plan-managed and NDIA-managed participants and explain each next step in plain English.</p>
+                <h1>NDIS support across the Northern Rivers that feels clear from day one.</h1>
+                <p class="lede">Harbour Lane Support provides Support Coordination, Plan Management, Daily Living Supports and Community Access across Ballina, Lismore, Byron Bay and nearby communities, with each next step explained in plain English.</p>
                 <ul class="hero-proof-list">
-                  <li><span class="proof-dot">01</span><span>For participants, families, carers and support coordinators who want practical support without the jargon.</span></li>
-                  <li><span class="proof-dot">02</span><span>Exact registration status, funding fit and service area are clear before anyone is asked to commit.</span></li>
-                  <li><span class="proof-dot">03</span><span>You can start with a short call, a callback request, or a simple enquiry form.</span></li>
+                  <li><span class="proof-dot">01</span><span>Practical support for participants, families, carers and coordinators.</span></li>
+                  <li><span class="proof-dot">02</span><span>Registration, funding fit and service area are clear before anyone commits.</span></li>
+                  <li><span class="proof-dot">03</span><span>Start with a short call, a callback request, or a simple enquiry.</span></li>
                 </ul>
                 <div class="hero-actions">
                   <a class="btn btn-primary" href="#contact">Check if we’re the right fit</a>
