@@ -60,6 +60,9 @@
         radial-gradient(900px 520px at 100% 0%, rgba(212, 227, 214, 0.34), transparent 54%),
         linear-gradient(180deg, #fffaf6 0%, #f6efe8 100%);
       line-height: 1.6;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     img {
@@ -189,6 +192,7 @@
       border: 1px solid transparent;
       font-weight: 800;
       line-height: 1.2;
+      overflow: visible;
       cursor: pointer;
       transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
     }
@@ -325,6 +329,12 @@
       color: var(--teal-700);
     }
 
+    .mobile-panel a.btn-primary,
+    .mobile-panel a.btn-primary:hover,
+    .mobile-panel a.btn-primary:focus-visible {
+      color: var(--white);
+    }
+
     .menu-toggle {
       display: none;
       width: 52px;
@@ -407,8 +417,8 @@
       inset: 0;
       z-index: 1;
       background:
-        linear-gradient(90deg, rgba(255, 249, 242, 0) 0%, rgba(255, 248, 241, 0.03) 44%, rgba(255, 248, 241, 0.26) 60%, rgba(255, 248, 241, 0.72) 82%, rgba(255, 248, 241, 0.88) 100%),
-        linear-gradient(180deg, rgba(76, 54, 43, 0.06), rgba(255, 255, 255, 0.02));
+        linear-gradient(90deg, rgba(24, 20, 18, 0.04) 0%, rgba(24, 20, 18, 0.08) 42%, rgba(24, 20, 18, 0.34) 60%, rgba(24, 20, 18, 0.72) 82%, rgba(24, 20, 18, 0.88) 100%),
+        linear-gradient(180deg, rgba(12, 10, 9, 0.08), rgba(255, 255, 255, 0.01));
       pointer-events: none;
     }
 
@@ -419,7 +429,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding-left: clamp(560px, 58%, 680px);
+      padding-left: clamp(470px, 52%, 600px);
       padding-right: clamp(8px, 1.5vw, 18px);
     }
 
@@ -429,20 +439,25 @@
       display: grid;
       gap: 12px;
       align-content: center;
+      color: var(--white);
     }
 
     .hero-copy h1 {
       font-size: clamp(2.2rem, 3.5vw, 3.3rem);
       max-width: 10.5ch;
-      line-height: 1;
+      line-height: 1.04;
+      padding-bottom: 0.08em;
       text-wrap: balance;
+      color: var(--white);
     }
 
     .hero-copy .lede {
       max-width: 36ch;
       font-size: 0.96rem;
       line-height: 1.48;
-      color: rgba(36, 25, 21, 0.9);
+      color: rgba(255, 255, 255, 0.92);
+      padding-top: 1px;
+      padding-bottom: 2px;
     }
 
     .hero-copy .eyebrow {
@@ -451,6 +466,7 @@
       border-radius: 0;
       background: transparent;
       box-shadow: none;
+      color: rgba(255, 255, 255, 0.88);
     }
 
     .hero-proof-list {
@@ -466,9 +482,11 @@
       grid-template-columns: auto 1fr;
       gap: 12px;
       align-items: start;
-      color: var(--ink-700);
+      color: rgba(255, 255, 255, 0.9);
       font-size: 0.94rem;
       line-height: 1.42;
+      padding-top: 1px;
+      padding-bottom: 2px;
     }
 
     .proof-dot {
@@ -479,9 +497,9 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 250, 245, 0.42);
-      border: 1px solid rgba(255, 255, 255, 0.38);
-      color: var(--teal-700);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      color: var(--white);
       font-size: 0.86rem;
       font-weight: 800;
       flex: 0 0 auto;
@@ -495,11 +513,12 @@
 
     .hero-note {
       margin: 0;
-      color: var(--teal-700);
+      color: rgba(255, 255, 255, 0.94);
       font-weight: 700;
       font-size: 0.94rem;
-      line-height: 1.4;
-      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
+      line-height: 1.5;
+      padding-top: 1px;
+      padding-bottom: 2px;
     }
 
     .media-frame {
@@ -540,11 +559,12 @@
 
     .hero-visual img {
       object-fit: cover;
-      object-position: 12% 40%;
+      object-position: 7% 38%;
+      padding: 0;
     }
 
     .about-media img {
-      object-position: center 36%;
+      object-position: center 30%;
     }
 
     .contact-media img {
@@ -624,7 +644,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
       align-items: stretch;
     }
@@ -649,12 +669,22 @@
         linear-gradient(145deg, #2f766e, #3d6d67 62%, #708667 100%);
       color: var(--white);
       box-shadow: 0 22px 44px rgba(47, 118, 110, 0.22);
+      padding: 24px;
     }
 
     .service-card.featured p,
     .service-card.featured h3,
     .service-card.featured li {
       color: var(--white);
+    }
+
+    .service-card.featured {
+      gap: 12px;
+    }
+
+    .service-card.featured .service-copy {
+      font-size: 1rem;
+      line-height: 1.52;
     }
 
     .service-icon {
@@ -688,6 +718,8 @@
       margin: 0;
       font-size: 1.2rem;
       letter-spacing: -0.03em;
+      line-height: 1.14;
+      padding-bottom: 0.06em;
     }
 
     .service-card p,
@@ -699,6 +731,7 @@
     .footer-meta p {
       margin: 0;
       color: var(--ink-700);
+      padding-bottom: 2px;
     }
 
     .service-card,
@@ -714,7 +747,7 @@
     .contact-detail p,
     .faq-aside p {
       line-height: 1.58;
-      padding-bottom: 1px;
+      padding-bottom: 2px;
     }
 
     .service-card.featured p {
@@ -727,12 +760,14 @@
 
     .service-points {
       display: grid;
-      gap: 8px;
+      gap: 7px;
       padding: 0;
       margin: auto 0 0;
       list-style: none;
       color: rgba(255, 255, 255, 0.92);
       font-weight: 600;
+      font-size: 0.98rem;
+      line-height: 1.4;
     }
 
     .service-points li {
@@ -764,6 +799,8 @@
     .services-footer p {
       margin: 0;
       color: var(--ink-700);
+      line-height: 1.58;
+      padding-bottom: 2px;
     }
 
     .chip-row {
@@ -791,12 +828,12 @@
 
     .about-shell {
       display: grid;
-      gap: 24px;
+      gap: 20px;
       align-items: stretch;
     }
 
     .about-banner {
-      min-height: 340px;
+      min-height: clamp(260px, 24vw, 320px);
     }
 
     .about-panel {
@@ -806,7 +843,7 @@
       border: 1px solid rgba(104, 82, 70, 0.1);
       box-shadow: var(--shadow-lg);
       display: grid;
-      gap: 24px;
+      gap: 18px;
     }
 
     .about-panel h2 {
@@ -814,7 +851,8 @@
       font-family: "Fraunces", serif;
       font-size: clamp(2rem, 4vw, 3.2rem);
       letter-spacing: -0.04em;
-      line-height: 1.05;
+      line-height: 1.08;
+      padding-bottom: 0.08em;
       color: var(--ink-950);
     }
 
@@ -1181,6 +1219,13 @@
       word-break: break-word;
     }
 
+    .contact-email {
+      font-size: 0.82rem;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
     .contact-detail small {
       color: var(--ink-500);
       font-size: 0.88rem;
@@ -1317,6 +1362,7 @@
     .reveal-enhanced [data-reveal="card"] {
       opacity: 0;
       transform: translateY(18px);
+      clip-path: none;
       transition:
         opacity 640ms cubic-bezier(0.22, 1, 0.36, 1),
         transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -1340,6 +1386,9 @@
     .reveal-enhanced [data-reveal].is-visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .reveal-enhanced [data-reveal="image"].is-visible {
       clip-path: inset(0 round 32px);
     }
 
@@ -1424,7 +1473,7 @@
       }
 
       .hero-content {
-        padding-left: clamp(430px, 54%, 560px);
+        padding-left: clamp(360px, 48%, 500px);
         padding-right: 10px;
       }
 
@@ -1434,12 +1483,12 @@
 
       .hero-shell::before {
         background:
-          linear-gradient(120deg, rgba(255, 249, 242, 0.01) 0%, rgba(255, 248, 241, 0.06) 42%, rgba(255, 248, 241, 0.26) 58%, rgba(255, 248, 241, 0.7) 82%, rgba(255, 248, 241, 0.88) 100%),
-          linear-gradient(180deg, rgba(67, 48, 40, 0.04), rgba(255, 255, 255, 0.02));
+          linear-gradient(120deg, rgba(24, 20, 18, 0.04) 0%, rgba(24, 20, 18, 0.08) 42%, rgba(24, 20, 18, 0.3) 58%, rgba(24, 20, 18, 0.68) 82%, rgba(24, 20, 18, 0.84) 100%),
+          linear-gradient(180deg, rgba(12, 10, 9, 0.08), rgba(255, 255, 255, 0.01));
       }
 
       .hero-visual img {
-        object-position: 10% 40%;
+        object-position: 5% 38%;
       }
 
       .contact-media {
@@ -1468,41 +1517,74 @@
       }
 
       .hero-shell {
-        min-height: 420px;
-        align-items: flex-end;
-        padding-block: 20px;
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: stretch;
+        padding: 0;
+        background: rgba(255, 250, 245, 0.96);
       }
 
       .hero-content {
-        padding-left: 0;
-        padding-right: 0;
+        position: static;
+        width: 100%;
+        padding: 18px 18px 20px;
+        align-items: stretch;
+        justify-content: stretch;
       }
 
       .hero-copy {
-        gap: 12px;
+        gap: 10px;
         width: 100%;
         max-width: none;
+        text-align: left;
+        justify-items: start;
+        color: var(--ink-950);
+      }
+
+      .hero-copy .eyebrow {
+        font-size: 0.74rem;
+        color: var(--teal-700);
       }
 
       .hero-copy h1 {
-        font-size: clamp(2rem, 9vw, 2.9rem);
-        max-width: 11ch;
+        font-size: clamp(1.95rem, 8vw, 2.35rem);
+        max-width: none;
+        line-height: 1.08;
+        color: var(--ink-950);
+        text-wrap: pretty;
       }
 
       .hero-copy .lede {
-        max-width: 100%;
+        display: block;
+        max-width: none;
         font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--ink-700);
       }
 
-      .hero-proof-list {
-        gap: 10px;
+      .hero-proof-list,
+      .hero-note {
+        display: none;
+      }
+
+      .hero-actions {
+        display: flex;
+        width: 100%;
+      }
+
+      .hero-actions .btn:last-child {
+        display: none;
       }
 
       .services-grid,
       .expect-grid,
-      .form-grid,
-      .trust-strip-grid {
+      .form-grid {
         grid-template-columns: 1fr;
+      }
+
+      .services-head > .btn {
+        display: none;
       }
 
       .faq-cta-row {
@@ -1522,13 +1604,62 @@
       }
 
       .hero-shell::before {
-        background:
-          linear-gradient(180deg, rgba(255, 249, 242, 0.06) 0%, rgba(255, 248, 241, 0.18) 46%, rgba(255, 248, 241, 0.78) 100%),
-          linear-gradient(180deg, rgba(67, 48, 40, 0.04), rgba(255, 255, 255, 0.02));
+        display: none;
+      }
+
+      .hero-visual {
+        position: relative;
+        inset: auto;
+        height: clamp(220px, 58vw, 300px);
       }
 
       .hero-visual img {
-        object-position: 18% 38%;
+        object-fit: cover;
+        object-position: center 28%;
+        padding: 0;
+      }
+
+      .hero .trust-strip {
+        margin-top: 12px !important;
+        padding: 8px;
+      }
+
+      .trust-strip-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .trust-strip-item {
+        gap: 4px;
+        padding: 12px 12px 13px;
+      }
+
+      .trust-strip-item strong {
+        font-size: 0.74rem;
+      }
+
+      .trust-strip-item span {
+        font-size: 0.92rem;
+      }
+
+      .about-banner {
+        min-height: 240px;
+      }
+
+      .contact-email {
+        white-space: normal;
+      }
+
+      .sticky-cta {
+        gap: 8px;
+        padding: 10px;
+      }
+
+      .sticky-cta .btn {
+        min-height: 50px;
+        padding-inline: 10px;
+        font-size: 0.9rem;
+        line-height: 1.15;
       }
 
       .reveal-enhanced [data-reveal="text"],
@@ -1558,6 +1689,10 @@
       .reveal-enhanced [data-reveal] {
         opacity: 1;
         transform: none;
+        clip-path: none;
+      }
+
+      .reveal-enhanced [data-reveal="image"] {
         clip-path: inset(0 round 32px);
       }
 
@@ -1618,7 +1753,8 @@
           <div class="hero-shell">
             <div class="hero-visual" aria-hidden="true" data-reveal="image">
               <picture>
-                <img src="assets/ndis-template/photos/hhero.png" alt="" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async" />
+                <source media="(max-width: 720px)" srcset="assets/ndis-template/photos/mhero.png" />
+                <img src="assets/ndis-template/photos/hhero2.png" alt="" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async" />
               </picture>
             </div>
 
@@ -1634,7 +1770,7 @@
                 </ul>
                 <div class="hero-actions">
                   <a class="btn btn-primary" href="#contact">Check if we’re the right fit</a>
-                  <a class="btn btn-ghost" href="tel:0400555123">Call 0400 555 123</a>
+                  <a class="btn btn-primary" href="tel:0400555123">Call 0400 555 123</a>
                 </div>
                 <p class="hero-note">You don’t need to have everything worked out before you contact us.</p>
               </div>
@@ -1686,11 +1822,11 @@
                 </svg>
               </div>
               <h3>Support Coordination</h3>
-              <p class="service-copy">Help to understand a plan, connect the right providers, and keep supports working together in a way that makes everyday life easier.</p>
+              <p class="service-copy">Help to understand a plan, connect the right providers and keep supports working together clearly.</p>
               <ul class="service-points">
                 <li>Clear guidance around providers, goals and service fit</li>
                 <li>Straightforward updates for participants, carers and coordinators</li>
-                <li>Practical support when needs or routines change</li>
+                <li>Practical help when needs or routines change</li>
               </ul>
             </article>
 
@@ -1995,7 +2131,7 @@
                 </article>
                 <article class="contact-detail">
                   <h3>Email</h3>
-                  <p>hello@harbourlanesupport.com.au</p>
+                  <p class="contact-email">hello@harbourlanesupport.com.au</p>
                   <a href="mailto:hello@harbourlanesupport.com.au">Send email</a>
                   <small>Useful for referrals and service questions</small>
                 </article>
